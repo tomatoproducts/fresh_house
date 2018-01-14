@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
+</head>
+<body>
+
+<div class="calc__wrapper">
+  <label class="calc__form-label" for="square">Площадь квартиры</label>
+  <input class="calc__form-input" onchange="cal()" type="text" name="square" value="" id="square">
+</div>
+<div>Стоимость дизайна сайта: <span id="result">0</span> руб.</div>
+<!-- <div class="calc__btn">Рассчитать</button> -->
+
+<script type="text/javascript">
+  function cal() {
+    var square = document.getElementById("square");
+    var result = document.getElementById("result");
+
+    var price = 0;
+    // price += parseInt(square.value);
+    if (parseInt(square.value) <=60) {
+      if (parseInt(square.value) >=40) {
+        price +=2000;
+      }
+    }
+    if (parseInt(square.value) <70) {
+      if (parseInt(square.value) >=60) {
+        price +=2400;
+      }
+    }
+    if (parseInt(square.value) <80) {
+      if (parseInt(square.value) >=70) {
+        price +=2800;
+      }
+    }
+    if (parseInt(square.value) <90) {
+      if (parseInt(square.value) >=80) {
+        price +=3200;
+      }
+    }
+    if (parseInt(square.value) <100) {
+      if (parseInt(square.value) >=90) {
+        price +=3600;
+      }
+    }
+
+  result.innerHTML = price;
+}
+</script>
+
+<script type="text/javascript">
+       /*
+        * Функция подсчета стоимости услуг на создания дизайна сайта
+        */
+        function calc() {
+            //получаем ссылку на элемент Select (Тип дизайна)
+            var type_design = document.getElementById("type_design");
+            //получаем ссылку на чекбокс (Требуется верстка?)
+            var is_html1 = document.getElementById("is_html1");
+            var is_html2 = document.getElementById("is_html2");
+            var is_html3 = document.getElementById("is_html3");
+            //получаем ссылку на элемент input (Кол-во вариантов)
+            var count = document.getElementById("count");
+            //получаем ссылку на элемент span, в него будем писать стоимость дизайна
+            var result = document.getElementById("result");
+
+            var price = 0;
+            price += parseInt(type_design.options[type_design.selectedIndex].value);
+            price += (is_html1.checked == true) ? parseInt(is_html1.value) : 0;
+            price += (is_html2.checked == true) ? parseInt(is_html2.value) : 0;
+            price += (is_html3.checked == true) ? parseInt(is_html3.value) : 0;
+            // price += parseInt(count.value);
+
+            result.innerHTML = price;
+        }
+
+</script>
+<b>Тип дизайна:</b><br/>
+        <select onchange="calc()" id="type_design">
+            <option value="0">Выбрать</option>
+            <option value="2000">40</option>
+            <option value="3500">60</option>
+            <option value="1500">70</option>
+        </select><br/>
+        <input type="checkbox" onchange="calc()" value="300" id="is_html1" />
+        <label for="is_html1">шторы</label>
+
+        <input type="checkbox" onchange="calc()" value="400" id="is_html2" />
+        <label for="is_html2">холодильник</label>
+
+        <input type="checkbox" onchange="calc()" value="600" id="is_html3" />
+        <label for="is_html3">окно</label>
+        <br/>
+
+
+        Кол-во вариантов: <input type="text" id="count" value="1" onchange="calc()" />
+        <div>Стоимость дизайна сайта: <span id="result">0</span> руб.</div>
+</body>
+</html>

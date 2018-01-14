@@ -1,0 +1,121 @@
+.reviews {
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.reviews__title {
+  display: block;
+  width: 210px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  color: #00c675;
+}
+
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+  // margin-bottom: 30px;
+  // justify-content: space-between;
+}
+
+.reviews__wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.reviews__item {
+  width: 280px;
+  padding: 10px;
+  box-sizing: border-box;
+height: 100px;
+overflow: hidden;
+}
+
+.reviews__item:hover {
+  // height: auto;
+  background-color: lighten(#BBB3B2, 5%);
+  color: white;
+  border-radius: 3px;
+  height: 100%;
+}
+
+.reviews__item-name {
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.reviews__item-text {
+  margin: 0;
+  padding: 10px;
+}
+
+@media (min-width: 660px) {
+  .reviews {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .reviews__title {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding: 0;
+    font-size: 36px;
+    line-height: 38px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #00c675;
+  }
+
+  .reviews__wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    justify-content: space-between;
+  }
+
+  .reviews__wrapper:last-child {
+    margin-bottom: 0;
+  }
+
+  .reviews__item {
+    width: 350px;
+    padding: 10px;
+
+    box-sizing: border-box;
+    height: auto;
+    overflow: visible;
+  }
+
+  .reviews__item:hover {
+    // height: auto;
+    background-color: lighten(#BBB3B2, 5%);
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .reviews__item-name {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  .reviews__item-text {
+    margin: 0;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,204 @@
+.slider-price {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+.slider-price__input {
+  display: none;
+}
+.slider-price__toggles {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // height: 10px;
+  // margin-left: -100px;
+  // text-align: center;
+  // z-index: 1000;
+}
+.slider-price__toggle {
+  display: block;
+  padding: 10px 20px;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+
+#btns-01:checked ~ .slider-price__toggles .slider-price__toggle--one1,
+#btns-02:checked ~ .slider-price__toggles .slider-price__toggle--two2,
+#btns-03:checked ~ .slider-price__toggles .slider-price__toggle--three3,
+#btns-04:checked ~ .slider-price__toggles .slider-price__toggle--four4 {
+  background-color: #00c675;
+  color: white;
+}
+
+.slider-price__toggle:hover {
+  color: lighten(#9b9998, 10%);
+}
+
+.slider-price__slides {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-price__slide {
+  width: 280px;
+  overflow-x: scroll;
+}
+.slider-price__slide-title {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 15px;
+  padding-left: 40px;
+  font-size: 18px;
+
+  &--general {
+    margin-bottom: 30px;
+    padding-left: 30px;
+  }
+}
+
+.slider-price__slide-list {
+  margin: 0;
+  margin-bottom: 40px;
+  width: 600px;
+}
+
+.slider-price__slide-list-item {
+  margin-bottom: 10px;
+}
+
+.slider-price__slide-text {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+
+  &--general {
+    margin-bottom: 50px;
+  }
+}
+
+.slider-price__slide {
+  display: none;
+}
+
+#btns-01:checked ~ .slider-price__slides div.slider-price__slide--one1 {
+    display: block;
+}
+#btns-02:checked ~ .slider-price__slides div.slider-price__slide--two2 {
+    display: block;
+}
+#btns-03:checked ~ .slider-price__slides div.slider-price__slide--three3 {
+    display: block;
+}
+#btns-04:checked ~ .slider-price__slides div.slider-price__slide--four4 {
+    display: block;
+}
+
+@media (min-width: 660px) {
+  .slider-price {
+    position: relative;
+    width: 1160px;
+    margin: 0 auto;
+  }
+  .slider-price__input {
+    display: none;
+  }
+  .slider-price__toggles {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #00c675;
+    border-radius: 2px;
+    // height: 10px;
+    // margin-left: -100px;
+    // text-align: center;
+    // z-index: 1000;
+  }
+  .slider-price__toggle {
+    display: block;
+    padding: 10px 20px;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  #btns-01:checked ~ .slider-price__toggles .slider-price__toggle--one1,
+  #btns-02:checked ~ .slider-price__toggles .slider-price__toggle--two2,
+  #btns-03:checked ~ .slider-price__toggles .slider-price__toggle--three3,
+  #btns-04:checked ~ .slider-price__toggles .slider-price__toggle--four4 {
+    background-color: #00c675;
+    color: white;
+  }
+
+  .slider-price__toggle:hover {
+    color: lighten(#9b9998, 10%);
+  }
+
+  .slider-price__slides {
+    display: flex;
+    justify-content: center;
+  }
+
+  .slider-price__slide {
+    width: auto;
+    overflow-x: visible;
+  }
+  .slider-price__slide-title {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 15px;
+    padding-left: 40px;
+    font-size: 18px;
+
+    &--general {
+      margin-bottom: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  .slider-price__slide-list {
+    margin: 0;
+    margin-bottom: 40px;
+    width: 600px;
+  }
+
+  .slider-price__slide-list-item {
+    margin-bottom: 10px;
+  }
+
+  .slider-price__slide-text {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+
+    &--general {
+      margin-bottom: 50px;
+    }
+  }
+
+  .slider-price__slide {
+    display: none;
+  }
+
+  #btns-01:checked ~ .slider-price__slides div.slider-price__slide--one1 {
+      display: block;
+  }
+  #btns-02:checked ~ .slider-price__slides div.slider-price__slide--two2 {
+      display: block;
+  }
+  #btns-03:checked ~ .slider-price__slides div.slider-price__slide--three3 {
+      display: block;
+  }
+  #btns-04:checked ~ .slider-price__slides div.slider-price__slide--four4 {
+      display: block;
+  }
+}

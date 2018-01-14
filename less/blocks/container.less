@@ -1,0 +1,27 @@
+.container {
+    width: 280px;
+    // min-height: 100px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &--footer {
+      display: flex;
+      width: 280px;
+      flex-direction: column;
+    }
+  }
+@media (min-width: 660px) {
+  .container {
+    width: 1160px;
+    min-height: 100px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &--footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
