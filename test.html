@@ -23,54 +23,72 @@
 <span id="quantity">0</span><span id="plus" style="cursor:pointer; display: inline-block; margin: 0 10px;"> + </span>
 <br>
 результат -- <span id="result"></span>
-
-
+<br>
+<br>
+<span id="minus1" onclick="countPlus()" style="cursor:pointer;display: inline-block; margin: 0 10px;" > - </span>
+<span id="quantity1">0</span><span id="plus1"  style="cursor:pointer; display: inline-block; margin: 0 10px;"> + </span>
+<br>
+результат - <span id="result1"></span>
 
 <script type="text/javascript">
 
-// переменная
   var value = 0;
   var valueUnit = "штук";
 
   result.innerHTML = value + valueUnit;
-
-  plus.addEventListener("click", function counter(){
+  function countPlus(){
     value = 1;
-    quantity.innerHTML++
+    if (quantity.innerHTML <=5) {
+        quantity.innerHTML++;
+        if (quantity.innerHTML ==1) {
+          valueUnit = "штука";
+        }
+        if(quantity.innerHTML < 1) {
+          quantity.innerHTML = 0;
+        }
+        if (quantity.innerHTML >=2) {
+            if (quantity.innerHTML <=4) {
+              valueUnit = "штуки";
+            }
+        }
+        if (quantity.innerHTML >=5) {
+          if (quantity.innerHTML <=20) {
+            valueUnit = "штук";
+          }
+        }
 
-      if (quantity.innerHTML >=2) {
+      result.innerHTML = quantity.innerHTML*1 * value + valueUnit;
+    }
+  }
+
+  function countMinus(){
+  var valueUnit = "штук";
+
+  result.innerHTML = value + valueUnit;
+    value = 1;
+    quantity.innerHTML--;
+    if (quantity.innerHTML ==1) {
+      valueUnit = "штука";
+    }
+    if(quantity.innerHTML < 1) {
+      quantity.innerHTML = 0;
+    }
+    if (quantity.innerHTML >=2) {
         if (quantity.innerHTML <=4) {
           valueUnit = "штуки";
         }
+    }
+    if (quantity.innerHTML >=5) {
+      if (quantity.innerHTML <=20) {
+        valueUnit = "штук";
       }
-      if (quantity.innerHTML >=5) {
-        if (quantity.innerHTML <=20) {
-          valueUnit = "штук";
-        }
-      }
+    }
+    result.innerHTML = quantity.innerHTML*1 * value + valueUnit;
+  }
 
-      result.innerHTML = quantity.innerHTML*1 * value + valueUnit;
-      // var result = getElementById(quantity);
-      // if (result >=5) {
-      //   if (result <=20) {
-      //     valueUnit = "штук";
-      //     result.innerHTML = quantity.innerHTML*1 * value + valueUnit;
-      //   }
-      // }
+  plus.addEventListener("click", countPlus)
 
-  })
-      // if (quantity.innerHTML >=5) {
-      //   document.getElementById("plus").setAttribute("disabled");
-      //   counter(){};
-      // }
-  minus.addEventListener("click", function(){
-    value = 20;
-    quantity.innerHTML--;
-    if(quantity.innerHTML < 1)
-      quantity.innerHTML = 0;
-    result.innerHTML = quantity.innerHTML*1 * value;
-  })
-
+  minus.addEventListener("click", countMinus)
 
 </script>
 
