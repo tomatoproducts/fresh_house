@@ -8,12 +8,127 @@
 </head>
 <body>
 
-<div class="calc__wrapper">
-  <label class="calc__form-label" for="square">Площадь квартиры</label>
-  <input class="calc__form-input" onchange="cal()" type="text" name="square" value="" id="square">
+<div class="add__item add__item--holod add__item--active">
+  <div class="add__item-title">Холодильник</div>
+  <div class="add-promo">
+    <div class="add-promo__descr">Очистим внутренние поверхности холодильника и морозильных камер</div>
+    <div class="add-promo__price">400 руб.</div>
+  </div>
 </div>
-<div>Стоимость дизайна сайта: <span id="result">0</span> руб.</div>
-<!-- <div class="calc__btn">Рассчитать</button> -->
+
+<br>
+<br>
+
+<span id="minus" style="cursor:pointer;display: inline-block; margin: 0 10px;" > - </span>
+<span id="quantity">0</span><span id="plus" style="cursor:pointer; display: inline-block; margin: 0 10px;"> + </span>
+<br>
+результат -- <span id="result"></span>
+
+
+
+<script type="text/javascript">
+
+// переменная
+  var value = 0;
+  var valueUnit = "штук";
+
+  result.innerHTML = value + valueUnit;
+
+  plus.addEventListener("click", function counter(){
+    value = 1;
+    quantity.innerHTML++
+
+      if (quantity.innerHTML >=2) {
+        if (quantity.innerHTML <=4) {
+          valueUnit = "штуки";
+        }
+      }
+      if (quantity.innerHTML >=5) {
+        if (quantity.innerHTML <=20) {
+          valueUnit = "штук";
+        }
+      }
+
+      result.innerHTML = quantity.innerHTML*1 * value + valueUnit;
+      // var result = getElementById(quantity);
+      // if (result >=5) {
+      //   if (result <=20) {
+      //     valueUnit = "штук";
+      //     result.innerHTML = quantity.innerHTML*1 * value + valueUnit;
+      //   }
+      // }
+
+  })
+      // if (quantity.innerHTML >=5) {
+      //   document.getElementById("plus").setAttribute("disabled");
+      //   counter(){};
+      // }
+  minus.addEventListener("click", function(){
+    value = 20;
+    quantity.innerHTML--;
+    if(quantity.innerHTML < 1)
+      quantity.innerHTML = 0;
+    result.innerHTML = quantity.innerHTML*1 * value;
+  })
+
+
+</script>
+
+
+<!--     // if (value == 1) {
+    //   valueUnit = "штука";
+    // }
+    // if (value >=2) {
+    //   if (value <=4) {
+    //     valueUnit = "штуки";
+    //   }
+    // }
+    // if (value >=5) {
+    //   if (value <=2) {
+    //     valueUnit = "штук";
+    //   }
+    // } -->
+
+
+<!-- <div class="calc">
+            <div class="calc__wrapper">
+              <label class="calc__form-label" for="square1">Площадь Вашей квартиры:</label>
+              <input class="calc__form-input" onchange="jcalc1()" type="text" value="" id="square1">
+              <span class="calc__form-unit">кв.м.</span>
+            </div>
+            <div class="calc__wrapper calc__wrapper--price">
+              <span class="calc__price">Стоимость уборки:</span>
+              <span class="calc__price-num" id="result1">0</span>
+              <span class="calc__price-unit">руб.</span>
+            </div>
+          </div>
+
+
+          <div class="calc">
+            <div class="calc__wrapper">
+              <label class="calc__form-label" for="square-general">Площадь Вашей квартиры:</label>
+              <input class="calc__form-input" onchange="calcGeneral()" type="text" value="" id="square-general">
+              <span class="calc__form-unit">кв.м.</span>
+            </div>
+            <div class="calc__wrapper calc__wrapper--price">
+              <span class="calc__price">Стоимость уборки:</span>
+              <span class="calc__price-num" id="result-general">0</span>
+              <span class="calc__price-unit">руб.</span>
+            </div>
+          </div>
+          <script type="text/javascript" src="js/calc.js">
+
+          </script>
+<input type="checkbox" onchange="cal()" value="300" id="is_html1" />
+<label for="is_html1">шторы</label>
+
+<input type="checkbox" onchange="cal()" value="400" id="is_html2" />
+<label for="is_html2">холодильник</label>
+
+<input type="checkbox" onchange="cal()" value="600" id="is_html3" />
+<label for="is_html3">окно</label>
+
+<div class="calc__btn">Рассчитать</button>
 
 <script type="text/javascript">
   function cal() {
@@ -21,11 +136,11 @@
     var result = document.getElementById("result");
 
     var price = 0;
-    // price += parseInt(square.value);
+    // price += (is_html1.checked == true) ? parseInt(is_html1.value) : 0;
+    // price += (is_html2.checked == true) ? parseInt(is_html2.value) : 0;
+    // price += (is_html3.checked == true) ? parseInt(is_html3.value) : 0;
     if (parseInt(square.value) <=60) {
-      if (parseInt(square.value) >=40) {
-        price +=2000;
-      }
+      price +=2000;
     }
     if (parseInt(square.value) <70) {
       if (parseInt(square.value) >=60) {
@@ -47,6 +162,8 @@
         price +=3600;
       }
     }
+
+    // price += parseInt(type_design.options[type_design.selectedIndex].value);
 
   result.innerHTML = price;
 }
@@ -98,6 +215,6 @@
 
 
         Кол-во вариантов: <input type="text" id="count" value="1" onchange="calc()" />
-        <div>Стоимость дизайна сайта: <span id="result">0</span> руб.</div>
+        <div>Стоимость дизайна сайта: <span id="result">0</span> руб.</div> -->
 </body>
 </html>

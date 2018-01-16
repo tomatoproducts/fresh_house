@@ -9,7 +9,7 @@
 .slider-price__toggles {
   width: 280px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,7 +47,6 @@
 
 .slider-price__slide {
   width: 280px;
-  overflow-x: scroll;
 }
 .slider-price__slide-title {
   font-weight: 500;
@@ -109,18 +108,15 @@
     display: none;
   }
   .slider-price__toggles {
-    width: 700px;
+    width: 685px;
     margin: 0 auto;
     margin-bottom: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 1px solid #00c675;
+    border: none;
     border-radius: 2px;
-    // height: 10px;
-    // margin-left: -100px;
-    // text-align: center;
-    // z-index: 1000;
+    background-color: rgba(245, 245, 245, 0.8);
   }
   .slider-price__toggle {
     display: block;
@@ -129,6 +125,7 @@
     line-height: 22px;
     font-weight: 500;
     cursor: pointer;
+    color: #666666;
   }
 
   #btns-01:checked ~ .slider-price__toggles .slider-price__toggle--one1,
