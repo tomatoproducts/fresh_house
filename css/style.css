@@ -1256,6 +1256,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: block;
     width: 260px;
     height: 200px;
+    margin-bottom: 10px;
     border: 1px dotted #00c675;
     border-radius: 5px;
     box-sizing: border-box;
@@ -1330,6 +1331,71 @@ input[type=number]::-webkit-outer-spin-button {
     line-height: 20px;
     font-weight: 400;
     text-align: center;
+  }
+}
+@media (min-width: 660px) {
+  .count {
+    display: -ms-flexbox;
+    display: flex;
+    width: 200px;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    margin: 0 auto;
+    outline: 1px solid;
+  }
+  .count__minus {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    outline: 1px solid;
+  }
+  .count__minus::after {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 10px;
+    width: 22px;
+    height: 5px;
+    background-color: #00c675;
+  }
+  .count__value {
+    display: block;
+    width: 100px;
+    padding: 9px 0;
+    text-align: center;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #00c675;
+    outline: 1px solid;
+    box-sizing: border-box;
+  }
+  .count__plus {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    outline: 1px solid;
+  }
+  .count__plus::before {
+    position: absolute;
+    content: "";
+    top: 17px;
+    left: 10px;
+    width: 22px;
+    height: 5px;
+    background-color: #00c675;
+    transform: rotate(90deg);
+  }
+  .count__plus::after {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 10px;
+    width: 22px;
+    height: 5px;
+    background-color: #00c675;
   }
 }
 .container {
