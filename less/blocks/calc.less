@@ -98,7 +98,12 @@ input[type=number]::-webkit-outer-spin-button {
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: rgba(245, 245, 245, 0.8)
+    background-color: rgba(245, 245, 245, 0.8);
+
+    &--four {
+      width: 1160px;
+      flex-wrap: wrap;
+    }
   }
   .calc__wrapper {
     display: flex;
@@ -108,10 +113,41 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0 50px;
     padding: 20px;
 
-    &--price {
-      // margin-right: 0;
+    &--four {
+      margin-right: 0;
     }
   }
+
+  .calc__label {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #666666;
+  }
+
+  .calc__label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #dddddd;
+    border-radius: 2px;
+    background-color: #ffffff;
+  }
+
+  .calc__input {
+    display: none;
+  }
+  #furniture:checked ~ .calc__label::before{
+    background-color: #00c675;
+  }
+
+
   .calc__form-label {
     display: block;
     width: auto;

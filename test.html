@@ -5,9 +5,44 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
 </head>
 <body>
 
+<input type="text" name="name" placeholder="Имя" required>
+<input type="text" name="tel" placeholder="Телефон" required>
+<div id="form_result"></div>
+<input type="submit" value="Заказать звонок">
+
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script>
+$("#submit").click(function() {
+var name = $('input[name=name]').val();
+var tel = $('input[name=tel]').val();
+var otpravka = true;
+if(name==""){
+otpravka = false;
+}
+if(tel==""){
+otpravka = false;
+}
+if(otpravka)
+{
+
+dannie = {'polz_name':name, 'polz_tel':tel};
+$.post('senda.php', dannie, function(otvet){
+rezultat = '<div style="color:#D80018;">'+otvet.text+'</div>';
+$("#form_result").hide().html(rezultat).slideDown();
+}, 'json');
+}
+});
+</script>
+
+
+<!-- <br>
+<br>
+<br>
 <div class="add__item add__item--holod add__item--active">
   <div class="add__item-title">Холодильник</div>
   <div class="add-promo">
@@ -16,137 +51,107 @@
   </div>
 </div>
 <b>Тип дизайна:</b><br/>
-        <select onchange="calc()" id="type_design">
-            <option value="0">Выбрать</option>
-            <option value="2000">40</option>
-            <option value="3500">60</option>
-            <option value="1500">70</option>
-        </select><br/>
-        <input type="checkbox" onchange="calc()" value="300" id="is_html1" />
+        <input type="radio" value="300" id="is_html1" />
         <label for="is_html1">шторы</label>
 
-        <input type="checkbox" onchange="calc()" value="400" id="is_html2" />
+        <input type="radio" value="400" id="is_html2" />
         <label for="is_html2">холодильник</label>
 
-        <input type="checkbox" onchange="calc()" value="600" id="is_html3" />
+        <input type="radio" value="600" id="is_html3" />
         <label for="is_html3">окно</label>
         <br/>
 
-<!--
-        Кол-во вариантов: <input type="text" id="count" value="1" onchange="calc()" /> -->
-        <div>Стоимость дизайна сайта: <span id="resultMid">0</span> руб.</div>
+        <div>Стоимость дизайна сайта: <span id="resultA">0</span> руб.</div>
 <br>
 <br>
 
 <span id="minus" style="cursor:pointer;display: inline-block; margin: 0 10px;" > - </span>
 <span id="quantity">0</span><span>шт</span><span id="plus" style="cursor:pointer; display: inline-block; margin: 0 10px;"> + </span>
 <br>
-результат -- <span id="result"></span>
+результат -- <span id="resultB"></span>
+
 <br>
 <br>
+
 <span id="totalBtn" style="display: block;width: 100px; background-color: red;cursor:pointer;">TOTAl</span> <span id="total"></span>
 
 
+ -->
+<!-- <script type="text/javascript">
 
-<script type="text/javascript">
-  var value = 0;
-function calc() {
-//     //получаем ссылку на элемент Select (Тип дизайна)
-//     var type_design = document.getElementById("type_design");
+  // var value = 0;
+  // function calcA() {
 //     //получаем ссылку на чекбокс (Требуется верстка?)
-    var is_html1 = document.getElementById("is_html1");
-    var is_html2 = document.getElementById("is_html2");
-    var is_html3 = document.getElementById("is_html3");
-//     // //получаем ссылку на элемент input (Кол-во вариантов)
-//     // var count = document.getElementById("count");
+    // var is_html1 = document.getElementById("is_html1");
+    // var is_html2 = document.getElementById("is_html2");
+    // var is_html3 = document.getElementById("is_html3");
 //     //получаем ссылку на элемент span, в него будем писать стоимость дизайна
-//     // var result = document.getElementById("result");
+//     var result = document.getElementById("resultA");
 
-    var price = 0;
-    // price += parseInt(type_design.options[type_design.selectedIndex].value);
-    price += (is_html1.checked == true) ? parseInt(is_html1.value) : 0;
-    price += (is_html2.checked == true) ? parseInt(is_html2.value) : 0;
-    price += (is_html3.checked == true) ? parseInt(is_html3.value) : 0;
-result.innerHTML =price;
-//     // price += parseInt(count.value);
+//     var price = 0;
+//     price += (is_html1.checked == true) ? parseInt(is_html1.value) : 0;
+//     price += (is_html2.checked == true) ? parseInt(is_html2.value) : 0;
+//     price += (is_html3.checked == true) ? parseInt(is_html3.value) : 0;
+//     resultA.innerHTML = price;
+//     console.log(result.innerHTML + " A");
+// }
+// resultB.innerHTML = value;
+// var a = 0;
+// var b = 0;
+// function countPlus(){
+//   if (quantity.innerHTML <=120) {
+//     resultB.innerHTML = value;
+//     value = 300;
+//     a +=30;
+//     b ++;
+//     quantity.innerHTML=a;
 
-//      resultMid.innerHTML = price + parseInt(result.innerHTML);
-}
+//     resultB.innerHTML = b*1 * value;
+//   }
+//   console.log(resultB.innerHTML + " B");
+// }
 
+// function countMinus(){
+//   resultB.innerHTML = value;
+//   value = 300;
+//   if (quantity.innerHTML >0) {
+//     quantity.innerHTML--;
+//   }
+//   resultB.innerHTML = quantity.innerHTML*1 * value;
+//   console.log(resultB.innerHTML + " B");
+// }
 
-  function countPlus(){
+// function total() {
+//   var total = document.getElementById("total");
+//   if (parseInt(resultA.innerHTML) >0) {
 
+// total.innerHTML =  parseInt(resultA.innerHTML) + parseInt(resultB.innerHTML);
 
-    if (quantity.innerHTML <=5) {
-      result.innerHTML = value;
-      value = 10;
-      quantity.innerHTML++;
+//   }
+// if (parseInt(resultB.innerHTML) >0) {
+//   total.innerHTML =  parseInt(resultA.innerHTML) + parseInt(resultB.innerHTML);
+//       }
 
-      resultMid.innerHTML = result.innerHTML = quantity.innerHTML*1 * value;
-    }
-    console.log(result.innerHTML + " 1");
-  }
+// if (parseInt(resultA.innerHTML) == 0) {
+//   if (parseInt(resultB.innerHTML) == 0) {
+//       total.innerHTML = 0;
+//     }
+// }
 
-  function countMinus(){
-    result.innerHTML = value;
-    value = 10;
-    if (quantity.innerHTML >0) {
-      quantity.innerHTML--;
-    }
-    resultMid.innerHTML = result.innerHTML = quantity.innerHTML*1 * value;
-    console.log(resultMid.innerHTML + " 2");
-  }
+//   console.log(total.innerHTML  + " итог");
+// }
 
-  function total() {
-
-    total.innerHTML =  parseInt(resultMid.innerHTML) + parseInt(result.innerHTML);
-    console.log(total.innerHTML  + " bnju");
-  }
-
-  plus.addEventListener("click", countPlus);
-  minus.addEventListener("click", countMinus);
- totalBtn.addEventListener("click", total);
-
-
+// is_html1.addEventListener("click", calcA);
+// is_html2.addEventListener("click", calcA);
+// is_html3.addEventListener("click", calcA);
+// plus.addEventListener("click", countPlus);
+// minus.addEventListener("click", countMinus);
+// totalBtn.addEventListener("click", total);
 </script>
+ -->
+
+<!-- <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script> -->
+
 
 </body>
 </html>
-<!-- <script type="text/javascript">
-  function cal() {
-    var square = document.getElementById("square");
-    var result = document.getElementById("result");
-
-    var price = 0;
-    price += (is_html1.checked == true) ? parseInt(is_html1.value) : 0;
-    price += (is_html2.checked == true) ? parseInt(is_html2.value) : 0;
-    price += (is_html3.checked == true) ? parseInt(is_html3.value) : 0;
-    if (parseInt(square.value) <=60) {
-      price +=2000;
-    }
-    if (parseInt(square.value) <70) {
-      if (parseInt(square.value) >=60) {
-        price +=2400;
-      }
-    }
-    if (parseInt(square.value) <80) {
-      if (parseInt(square.value) >=70) {
-        price +=2800;
-      }
-    }
-    if (parseInt(square.value) <90) {
-      if (parseInt(square.value) >=80) {
-        price +=3200;
-      }
-    }
-    if (parseInt(square.value) <100) {
-      if (parseInt(square.value) >=90) {
-        price +=3600;
-      }
-    }
-
-    // price += parseInt(type_design.options[type_design.selectedIndex].value);
-
-  result.innerHTML = price;
-}
-</script> -->

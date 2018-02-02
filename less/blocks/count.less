@@ -1,17 +1,104 @@
+.count {
+  position: relative;
+  display: flex;
+  width: 130px;
+  margin-bottom: 30px;
+}
+.count__minus {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px dotted #00c675;
+  border-radius: 5px;
+}
+.count__minus::after {
+  position: absolute;
+  content: "";
+  top: 18px;
+  left: 12px;
+  width: 17px;
+  height: 4px;
+  background-color: #00c675;
+}
+.count__value {
+  display: block;
+  width: 50px;
+  padding: 9px 0;
+  padding-left: 5px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #00c675;
+  border: 1px dotted #00c675;
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  &--4 {
+    font-size: 18px;
+    padding-left: 7px;
+
+  }
+  &--15 {
+    padding-left: 15px;
+  }
+}
+
+.count__unit {
+  position: absolute;
+  top: 25%;
+  right: 43px;
+  font-weight: 700;
+  color: #00c675;
+}
+
+.count__plus {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px dotted #00c675;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.count__plus::before {
+  position: absolute;
+  content: "";
+  top: 17px;
+  left: 12px;
+  width: 17px;
+  height: 4px;
+
+  background-color: #00c675;
+  transform: rotate(90deg);
+}
+.count__plus::after {
+  position: absolute;
+  content: "";
+  top: 18px;
+  left: 12px;
+  width: 17px;
+  height: 4px;
+  background-color: #00c675;
+}
+
 @media (min-width: 660px) {
   .count {
+    position: relative;
     display: flex;
-    width: 200px;
+    width: 220px;
     justify-content: space-between;
     margin: 0 auto;
-    outline: 1px solid;
   }
   .count__minus {
     position: relative;
     display: block;
     width: 40px;
     height: 40px;
-    outline: 1px solid;
+    cursor: pointer;
+    border: 1px dotted #00c675;
+    border-radius: 5px;
   }
   .count__minus::after {
     position: absolute;
@@ -24,22 +111,45 @@
   }
   .count__value {
     display: block;
-    width: 100px;
+    width: 120px;
     padding: 9px 0;
-    text-align: center;
+    padding-left: 40px;
     font-size: 22px;
     line-height: 22px;
     font-weight: 700;
     color: #00c675;
-    outline: 1px solid;
+    border: 1px dotted #00c675;
+    border-radius: 5px;
     box-sizing: border-box;
+
+    &--15 {
+    text-align: left;
+
+    }
   }
+
+  .count__unit {
+    position: absolute;
+    top: 25%;
+    right: 70px;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #00c675;
+
+    &--15 {
+      right: 85px;
+    }
+  }
+
   .count__plus {
     position: relative;
     display: block;
     width: 40px;
     height: 40px;
-    outline: 1px solid;
+    border: 1px dotted #00c675;
+    border-radius: 5px;
+    cursor: pointer;
   }
   .count__plus::before {
     position: absolute;

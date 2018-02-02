@@ -1,106 +1,29 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <title>Цена уборки квартиры в Москве. Генеральная уборка квартиры от 3500р. Фреш Хаус - качественная доступная уборка вашего дома.</title>
-    <meta name="description" content="Уборка в Москве от 1500 руб. Профессиональная уборка Вашей квартиры от компании Fresh House. ">
-    <meta name="keywords" content="Заказать уборку квартир в Москве, цена на уборку, клининговая компания Фреш Хаус, генеральный, клининг услуги, порядок в доме, отчистить, отмыть.">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
-  <!-- <script src="js/jquery.js"></script> -->
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Создание формы обратной связи </title>
+        <meta name="description" content=""/>
+        <meta name="Keywords" content=""/>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
-</head>
+
+    </head>
 <body>
-  <!-- Yandex.Metrika counter -->
+   <div class="main">
+      <h3>Внимание</h3>
+      <p>Оставьте ваши контактные данные и наш консультант<br/>
+        свяжется с вами в течении этого века</p>
 
-<script type="text/javascript" >
-
-    (function (d, w, c) {
-
-        (w[c] = w[c] || []).push(function() {
-
-            try {
-
-                w.yaCounter47255544 = new Ya.Metrika({
-
-                    id:47255544,
-
-                    clickmap:true,
-
-                    trackLinks:true,
-
-                    accurateTrackBounce:true,
-
-                    webvisor:true
-
-                });
-
-            } catch(e) { }
-
-        });
-
-
-
-        var n = d.getElementsByTagName("script")[0],
-
-            s = d.createElement("script"),
-
-            f = function () { n.parentNode.insertBefore(s, n); };
-
-        s.type = "text/javascript";
-
-        s.async = true;
-
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-
-
-        if (w.opera == "[object Opera]") {
-
-            d.addEventListener("DOMContentLoaded", f, false);
-
-        } else { f(); }
-
-    })(document, window, "yandex_metrika_callbacks");
-
-</script>
-
-<noscript><div><img src="https://mc.yandex.ru/watch/47255544" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-<!-- /Yandex.Metrika counter -->
-<header class="page-header">
-  <div class="page-header__wrapper">
-    <a class="page-header__logo" href="index.html">Fresh House</a>
-    <span class="page-header__note">Cleaning company</span>
-  </div>
-  <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a class="main-nav__item-link main-nav__item-link--active" href="index.html#services">Услуги</a></li>
-        <li class="main-nav__item"><a class="main-nav__item-link" href="pricelist.html">Цены</a></li>
-      </ul>
-  </nav>
-  <div class="social social--header">
-    <div class="social__wrapper social__wrapper--header">
-        <a class="social__link social__link--vk" href="https://vk.com/freshhouseclean" target="_blank">vk</a>
-        <a class="social__link social__link--inst" href="https://www.instagram.com/freshhouse.clean" target="_blank">inst</a>
-        <a class="social__link social__link--fb" href="https://www.facebook.com/Fresh-House-363124174099586" target="_blank">fb</a>
-      </div>
-  </div>
-  <div class="page-header__contacts">
-    <a class="page-header__contacts-phone">+7(985)117-42-22</a>
-    <span class="page-header__contacts-discr">Уборка квартир в Москве</span>
-    <span class="page-header__contacts-time">пн - вс: 09:00 - 19:00</span>
-  </div>
-</header>
-
-<main>
-  <div class="promo-block promo-block--pricelist">
-    <div class="container">
-      <div class="promo-block__wrapper promo-block__wrapper--pricelist">
-        <div class="promo-block__slogan promo-block__slogan--pricelist">
-          Подарите время своим близким, а уборку оставьте нам!
-        </div>
-        <div class="price" id="pricelist">
+<!-- 		<form id="application" action=" application.php" method="POST" name=" application ">
+			<input name="name" id="applicationName" maxlength="20" placeholder="Введите ваше имя" required />
+			<input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail" required/>
+			<input name="telephone" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон" required />
+			<button class="applicationButton" type="submit" form="application"> Получить прайс </button>
+		</form>
+	</div> -->
+<section class="price" id="pricelist">
           <h2 class="price__title">Стоимость услуг</h2>
           <div class="slider-price">
             <input class="slider-price__input" type="radio" name="slider" id="btns-01" value="Стандартная" checked="checked">
@@ -108,10 +31,10 @@
             <input class="slider-price__input" type="radio" name="slider" id="btns-03" value="Экспресс">
             <input class="slider-price__input" type="radio" name="slider" id="btns-04" value="После_ремонта">
             <div class="slider-price__toggles">
-              <label class="slider-price__toggle slider-price__toggle--one1" for="btns-01" >Стандартная</label>
-              <label class="slider-price__toggle slider-price__toggle--two2" for="btns-02" >Генеральная</label>
-              <label class="slider-price__toggle slider-price__toggle--three3" for="btns-03" >Экспресс</label>
-              <label class="slider-price__toggle slider-price__toggle--four4" for="btns-04" >После ремонта</label>
+              <label class="slider-price__toggle slider-price__toggle--one1" for="btns-01">Стандартная</label>
+              <label class="slider-price__toggle slider-price__toggle--two2" for="btns-02">Генеральная</label>
+              <label class="slider-price__toggle slider-price__toggle--three3" for="btns-03">Экспресс</label>
+              <label class="slider-price__toggle slider-price__toggle--four4" for="btns-04">После ремонта</label>
             </div>
             <div class="slider-price__slides">
               <!-- стандарт -->
@@ -180,10 +103,7 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </section>
   <section class="add">
     <div class="container">
       <h2 class="add__title">Дополнительно</h2>
@@ -445,148 +365,123 @@
             <div class="count__plus" id="plus15"></div>
           </div>
         </div>
-      </div>
 
-      <div class="add__results">
-        <div class="add__result">
-          <div class="add__btn" onclick ="resultDopTotal();">Рассчитать стоимость доп. услуг:</div>
-          <div class="add__sum" id="resultDopTotal"></div>
-          <div class="add__unit">руб.</div>
-        </div>
-        <div class="add__result">
-          <div class="add__btn" id="resultTotalBtn">Рассчитать общую стоимость:</div>
-          <div class="add__sum" id="resultTotal"></div>
-          <div class="add__unit">руб.</div>
+        <div class="count__price">
+          <div class="count__price-item">
+            <div class="count__price-title" onclick ="resultDopTotal();">Рассчитать стоимость доп. услуг:</div>
+            <div class="count__price-num" id="resultDopTotal"></div>
+            <div class="count__price-unit">руб.</div>
+          </div>
+          <div class="count__price-item">
+            <div class="count__price-title" id="resultTotalBtn">Рассчитать общую стоимость:</div>
+            <div class="count__price-num" id="resultTotal"></div>
+            <div class="count__price-unit">руб.</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="order">
-    <div class="container">
-    <h2 class="order__title">Заказ на уборку</h2>
+<section class="order">
     <form class="form" id="application" action="application.php" method="POST" name="application">
-      <div class="form__field">
+      <div class="form__wrapper">
         <h3 class="form__title">Контактные данные</h3>
-        <div class="form__wrapper">
-          <div class="form__inner">
-            <label class="form__label" for="name">Имя*:</label>
-            <input class="form__input" type="text" name="name" id="name" required>
-          </div>
-          <div class="form__inner">
-            <label class="form__label" for="phone">Телефон*:</label>
-            <input class="form__input" type="tel" name="telephone" id="phone" required>
-          </div>
-          <div class="form__inner">
-            <label class="form__label" for="email">Email:</label>
-            <input class="form__input" type="email" name="email" id="email">
-          </div>
+        <div class="form__inner">
+          <label class="form__label" for="name">Имя*:</label>
+          <input class="form__input" type="text" name="name" id="name" required>
+        </div>
+        <div class="form__inner">
+          <label class="form__label" for="phone">Телефон*:</label>
+          <input class="form__input" type="tel" name="telephone" id="phone" required>
+        </div>
+        <div class="form__inner">
+          <label class="form__label" for="email">Email:</label>
+          <input class="form__input" type="email" name="email" id="email">
         </div>
       </div>
-      <div class="form__field">
-        <h3 class="form__title">Дата и время уборки</h3>
-        <div class="form__wrapper">
-          <div class="form__inner">
-            <label class="form__label" for="date">Дата</label>
-            <input class="form__input" type="date" name="date" id="date">
-          </div>
-          <div class="form__inner">
-            <label class="form__label" for="time">Время</label>
-            <select class="form__time" name="time" id="time">
-              <option class="form__option" value="9:00">9:00</option>
-              <option class="form__option" value="09:30">9:30</option>
-              <option class="form__option" value="10:00">10:00</option>
-              <option class="form__option" value="10:30">10:30</option>
-              <option class="form__option" value="11:00">11:00</option>
-              <option class="form__option" value="11:30">11:30</option>
-              <option class="form__option" value="12:00">12:00</option>
-              <option class="form__option" value="12:30">12:30</option>
-              <option class="form__option" value="13:00">13:00</option>
-              <option class="form__option" value="13:30">13:30</option>
-              <option class="form__option" value="14:00">14:00</option>
-              <option class="form__option" value="14:30">14:30</option>
-              <option class="form__option" value="15:00">15:00</option>
-              <option class="form__option" value="15:30">15:30</option>
-              <option class="form__option" value="16:00">16:00</option>
-              <option class="form__option" value="16:30">16:30</option>
-              <option class="form__option" value="17:00">17:00</option>
-              <option class="form__option" value="17:30">17:30</option>
-              <option class="form__option" value="18:00">18:00</option>
-              <option class="form__option" value="18:30">18:30</option>
-              <option class="form__option" value="19:00">19:00</option>
-            </select>
-          </div>
+      <div class="form__wrapper">
+        <h3 class="form__title">Дата и время</h3>
+        <div class="form__inner">
+          <label class="form__label" for="date">Дата</label>
+          <input class="form__input" type="date" name="date" id="date">
+        </div>
+        <div class="form__inner">
+          <label class="form__label" for="time">Время</label>
+          <select class="form__time" name="time" id="time">
+            <option class="form__option" value="9:00">9:00</option>
+            <option class="form__option" value="09:30">9:30</option>
+            <option class="form__option" value="10:00">10:00</option>
+            <option class="form__option" value="10:30">10:30</option>
+            <option class="form__option" value="11:00">11:00</option>
+            <option class="form__option" value="11:30">11:30</option>
+            <option class="form__option" value="12:00">12:00</option>
+            <option class="form__option" value="12:30">12:30</option>
+            <option class="form__option" value="13:00">13:00</option>
+            <option class="form__option" value="13:30">13:30</option>
+            <option class="form__option" value="14:00">14:00</option>
+            <option class="form__option" value="14:30">14:30</option>
+            <option class="form__option" value="15:00">15:00</option>
+            <option class="form__option" value="15:30">15:30</option>
+            <option class="form__option" value="16:00">16:00</option>
+            <option class="form__option" value="16:30">16:30</option>
+            <option class="form__option" value="17:00">17:00</option>
+            <option class="form__option" value="17:30">17:30</option>
+            <option class="form__option" value="18:00">18:00</option>
+            <option class="form__option" value="18:30">18:30</option>
+            <option class="form__option" value="19:00">19:00</option>
+          </select>
         </div>
       </div>
-      <div class="form__field">
+      <div class="form__wrapper">
         <h3 class="form__title">Адрес</h3>
-        <div class="form__wrapper form__wrapper--address">
-          <div class="form__inner">
-            <label class="form__label" for="metro">Станция метро:</label>
-            <input class="form__input" type="text" name="metro" id="metro">
-          </div>
-          <div class="form__inner">
-            <label class="form__label" for="address">Улица, дом, номер квартиры*:</label>
-            <input class="form__input" type="text" name="address" id="address" required>
-          </div>
-          <div class="form__inner">
-            <label class="form__label" for="entrance">Подъезд:</label>
-            <input class="form__input" type="text" name="entrance" id="entrance">
-          </div>
-          <div class="form__inner">
-            <label class="form__label" for="floor">Этаж:</label>
-            <input class="form__input" type="text" name="floor" id="floor">
-          </div>
-          <div class="form__inner">
-            <label class="form__label" for="key">Домофон:</label>
-            <input class="form__input" type="text" name="key" id="key">
-          </div>
+        <div class="form__inner">
+          <label class="form__label" for="metro">Станция метро:</label>
+          <input class="form__input" type="text" name="metro" id="metro">
+        </div>
+        <div class="form__inner">
+          <label class="form__label" for="address">Улица, дом, номер квартиры*:</label>
+          <input class="form__input" type="text" name="address" id="address" required>
+        </div>
+        <div class="form__inner">
+          <label class="form__label" for="entrance">Подъезд:</label>
+          <input class="form__input" type="text" name="entrance" id="entrance">
+        </div>
+        <div class="form__inner">
+          <label class="form__label" for="floor">Этаж:</label>
+          <input class="form__input" type="text" name="floor" id="floor">
+        </div>
+        <div class="form__inner">
+          <label class="form__label" for="key">Домофон:</label>
+          <input class="form__input" type="text" name="key" id="key">
         </div>
       </div>
-      <div class="form__field">
+      <div class="form__wrapper">
         <h3 class="form__title">Дополнительно</h3>
-        <div class="form__wrapper">
-          <div class="form__inner">
-            <label class="form__label form__label--hoover" for="hoover">У меня нет пылесоса</label>
-            <input class="form__input form__input--hoover" type="checkbox" name="hoover[]" id="hoover">
-          </div>
-          <div class="form__inner">
-            <label class="form__label" for="comments">Комментарии</label>
-            <textarea class="form__textarea" name="comments" id="comments"></textarea>
-          </div>
+        <div class="form__inner">
+          <label class="form__label" for="hoover">У меня нет пылесоса</label>
+          <input class="form__input" type="checkbox" name="hoover[]" id="hoover">
+        </div>
+        <div class="form__inner">
+          <label class="form__label" for="comments">Комментарии</label>
+          <textarea class="form__textarea" name="comments" id="comments"></textarea>
         </div>
       </div>
-      <textarea class="summa" id="summa" name="summa" style=" height: 50px; outline: 1px solid green; font-size: 14px;line-height: 16px; color: red;"></textarea>
+      <div class="form__wrapper">
+        <label class="form__label" for="cleaning">Тип Уборки</label>
+        <select class="form__cleaning" name="cleaning" id="cleaning">
+          <option class="form__option" value="Стандартная">Стандартная</option>
+          <option class="form__option" value="Генеральная">Генеральная</option>
+          <option class="form__option" value="Экспресс">Экспресс</option>
+          <option class="form__option" value="После ремонта">После ремонта</option>
+        </select>
+
+    </div>
+ <textarea class="summa" id="summa" name="summa" style=" height: 50px; outline: 1px solid; font-size: 14px;line-height: 16px; color: red;"></textarea>
       <input class="form__btn" type="submit" value="Заказать">
     </form>
-  </div>
   </section>
-</main>
-
-<footer class="page-footer">
-  <div class="container container--footer">
-    <div class="contacts" id="contacts">
-      <div class="contacts__wrapper">
-        <span class="contacts__title">Позвоните:</span>
-        <a class="contacts__text">+7(985)117-42-22</a>
-      </div>
-      <div class="contacts__wrapper">
-        <span class="contacts__title">Напишите:</span>
-        <a class="contacts__text" href="mailto:service.freshhouse@gmail.com">service.freshhouse@gmail.com</a>
-      </div>
-    </div>
-    <div class="social social--footer">
-      <div class="social__wrapper social__wrapper--footer">
-        <a class="social__logo" href="index.html">Fresh House</a>
-      </div>
-      <div class="social__wrapper social__wrapper--footer">
-        <a class="social__link social__link--vk" href="https://vk.com/freshhouseclean" target="_blank">vk</a>
-        <a class="social__link social__link--inst" href="https://www.instagram.com/freshhouse.clean" target="_blank">inst</a>
-        <a class="social__link social__link--fb" href="https://www.facebook.com/Fresh-House-363124174099586" target="_blank">fb</a>
-      </div>
-    </div>
-  </div>
-</footer>
-<script type="text/javascript" src="js/calc.js"></script>
+        <script type="text/javascript" src="js/calc.js"></script>
 </body>
 </html>
+
+
