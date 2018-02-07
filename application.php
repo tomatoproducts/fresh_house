@@ -65,9 +65,31 @@ $msg .= "</body></html>";
 
 // отправка сообщения
 if(@mail($sendto, $subject, $msg, $headers)) {
-	echo "<center><img src='spasibo.png'></center>";
+  echo '<main>
+  <div class="promo-block promo-block--send">
+    <div class="container">
+      <div class="promo-block__wrapper promo-block__wrapper--send">
+        <div class="send">
+            <h1 class="send__title">Ваш заказ принят!</h1>
+            <p class="send__text">Наш менеджер свяжется с Вами в течении 10 минут!</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>';
 } else {
-	echo "<center><img src='ne-otpravleno.png'></center>";
+  echo '<main>
+  <div class="promo-block promo-block--send">
+    <div class="container">
+      <div class="promo-block__wrapper promo-block__wrapper--send">
+        <div class="send">
+            <h1 class="send__title send__title--error">Произошла ошибка!</h1>
+            <p class="send__text">Пожалуйста обновите страницу и попробуйте еще раз.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>';
 }
 
 ?>
