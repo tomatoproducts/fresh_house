@@ -466,24 +466,24 @@
     <div class="container">
     <h2 class="order__title">Заказ на уборку</h2>
     <form class="form" id="application" action="application.php" method="POST" name="application">
-      <div class="form__field">
+      <div class="form__field form__field--name">
         <h3 class="form__title">Контактные данные</h3>
         <div class="form__wrapper">
           <div class="form__inner">
             <label class="form__label" for="name">Имя*:</label>
-            <input class="form__input" type="text" name="name" id="name" required>
+            <input class="form__input form__input--long" type="text" name="name" id="name" required>
           </div>
           <div class="form__inner">
             <label class="form__label" for="phone">Телефон*:</label>
-            <input class="form__input" type="tel" name="telephone" id="phone" required>
+            <input class="form__input" type="number" name="telephone" id="phone" required>
           </div>
           <div class="form__inner">
             <label class="form__label" for="email">Email:</label>
-            <input class="form__input" type="email" name="email" id="email">
+            <input class="form__input form__input--long" type="email" name="email" id="email">
           </div>
         </div>
       </div>
-      <div class="form__field">
+      <div class="form__field form__field--date">
         <h3 class="form__title">Дата и время уборки</h3>
         <div class="form__wrapper">
           <div class="form__inner">
@@ -518,7 +518,7 @@
           </div>
         </div>
       </div>
-      <div class="form__field">
+      <div class="form__field form__field--address">
         <h3 class="form__title">Адрес</h3>
         <div class="form__wrapper form__wrapper--address">
           <div class="form__inner">
@@ -527,39 +527,49 @@
           </div>
           <div class="form__inner">
             <label class="form__label" for="address">Улица, дом, номер квартиры*:</label>
-            <input class="form__input" type="text" name="address" id="address" required>
+            <input class="form__input form__input--long" type="text" name="address" id="address" required>
           </div>
           <div class="form__inner">
             <label class="form__label" for="entrance">Подъезд:</label>
-            <input class="form__input" type="text" name="entrance" id="entrance">
+            <input class="form__input form__input--short" type="text" name="entrance" id="entrance">
           </div>
           <div class="form__inner">
             <label class="form__label" for="floor">Этаж:</label>
-            <input class="form__input" type="text" name="floor" id="floor">
+            <input class="form__input form__input--short" type="text" name="floor" id="floor">
           </div>
           <div class="form__inner">
             <label class="form__label" for="key">Домофон:</label>
-            <input class="form__input" type="text" name="key" id="key">
+            <input class="form__input form__input--short" type="text" name="key" id="key">
           </div>
         </div>
       </div>
-      <div class="form__field">
+      <div class="form__field form__field--add">
         <h3 class="form__title">Дополнительно</h3>
         <div class="form__wrapper">
-          <div class="form__inner">
+          <!-- <div class="form__inner">
             <label class="form__label form__label--hoover" for="hoover">У меня нет пылесоса</label>
             <input class="form__input form__input--hoover" type="checkbox" name="hoover[]" id="hoover">
-          </div>
-          <div class="form__inner">
+          </div> -->
+          <div class="form__inner form__inner--comments">
             <label class="form__label" for="comments">Комментарии</label>
             <textarea class="form__textarea" name="comments" id="comments"></textarea>
           </div>
+          <div class="form__inner form__inner--hidden">
+            <label class="form__label" for="summa">Ваш заказ</label>
+            <textarea class="summa" id="summa" name="summa"></textarea>
+          </div>
+          </div>
         </div>
-      </div>
-      <textarea class="summa" id="summa" name="summa" style=" height: 50px; outline: 1px solid green; font-size: 14px;line-height: 16px; color: red;"></textarea>
-      <input class="form__btn" type="submit" value="Заказать">
+
     </form>
-  </div>
+    <div class="form__field">
+      <div class="form__note">* &#8212; Обязательные поля</div>
+      <div class="form__confidencial">Отправляя заказ, Вы принимаете условия
+        <a class="form__confidencial-link" href="confidencial.html">Политики конфиденциальности</a>
+      </div>
+      <input class="form__btn" type="submit" value="Заказать уборку" form="application">
+      </div>
+    </div>
   </section>
 </main>
 
