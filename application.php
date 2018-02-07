@@ -27,15 +27,15 @@ $usercomments =$_POST ['comments']; // сохраняем данные из вы
 $summa =$_POST ['summa']; // холодильник
 
 
-$userhoover = '';
-  if (empty($_POST["hoover"]))
-  {
-     $userhoover = "Пылесос не нужен";
-  }
-  elseif (!empty($_POST["hoover"]) && is_array($_POST["hoover"]))
-  {
-     $userhoover = "Пылесос нужен";
-  }
+// $userhoover = '';
+//   if (empty($_POST["hoover"]))
+//   {
+//      $userhoover = "Пылесос не нужен";
+//   }
+//   elseif (!empty($_POST["hoover"]) && is_array($_POST["hoover"]))
+//   {
+//      $userhoover = "Пылесос нужен";
+//   }
 
 // Формирование заголовка письма
 $subject  = "Заявка на уборку";
@@ -59,7 +59,7 @@ $msg .= "<p><strong>Домофон:</strong> ".$userkey."</p>\r\n";
 $msg .= "<p><strong>Дата:</strong> ".$userdate."</p>\r\n";
 $msg .= "<p><strong>Время:</strong> ".$usertime."</p>\r\n";
 $msg .= "<p><strong>Комментарии:</strong> ".$usercomments."</p>\r\n";
-$msg .= "<p><strong>Пылесос:<br/> </strong> ".$userhoover."</p>\r\n";
+// $msg .= "<p><strong>Пылесос:<br/> </strong> ".$userhoover."</p>\r\n";
 $msg .= "<p><strong>Доп услуги :</strong> ".$summa."</p>\r\n";
 $msg .= "</body></html>";
 
