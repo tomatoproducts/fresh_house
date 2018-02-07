@@ -4,9 +4,34 @@
 <meta charset="UTF-8">
 <title>Создание формы обратной связи</title>
 <meta http-equiv="Refresh" content="4; URL=http://freshhouse-clean.ru/pricelist.html">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
 </head>
 <body>
-
+<header class="page-header">
+  <div class="page-header__wrapper">
+    <a class="page-header__logo" href="index.html">Fresh House</a>
+    <span class="page-header__note">Cleaning company</span>
+  </div>
+  <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__item-link main-nav__item-link--active" href="index.html#services">Услуги</a></li>
+        <li class="main-nav__item"><a class="main-nav__item-link" href="pricelist.html">Цены</a></li>
+      </ul>
+  </nav>
+  <div class="social social--header">
+    <div class="social__wrapper social__wrapper--header">
+        <a class="social__link social__link--vk" href="https://vk.com/freshhouseclean" target="_blank">vk</a>
+        <a class="social__link social__link--inst" href="https://www.instagram.com/freshhouse.clean" target="_blank">inst</a>
+        <a class="social__link social__link--fb" href="https://www.facebook.com/Fresh-House-363124174099586" target="_blank">fb</a>
+      </div>
+  </div>
+  <div class="page-header__contacts">
+    <a class="page-header__contacts-phone">+7(985)117-42-22</a>
+    <span class="page-header__contacts-discr">Уборка квартир в Москве</span>
+    <span class="page-header__contacts-time">пн - вс: 09:00 - 19:00</span>
+  </div>
+</header>
 <?php
 
 $sendto   = "service.freshhouse@gmail.com"; // почта, на которую будет приходить письмо
@@ -60,7 +85,7 @@ $msg .= "<p><strong>Дата:</strong> ".$userdate."</p>\r\n";
 $msg .= "<p><strong>Время:</strong> ".$usertime."</p>\r\n";
 $msg .= "<p><strong>Комментарии:</strong> ".$usercomments."</p>\r\n";
 // $msg .= "<p><strong>Пылесос:<br/> </strong> ".$userhoover."</p>\r\n";
-$msg .= "<p><strong>Доп услуги :</strong> ".$summa."</p>\r\n";
+$msg .= "<p><strong>Услуги :</strong> ".$summa."</p>\r\n";
 $msg .= "</body></html>";
 
 // отправка сообщения
@@ -93,6 +118,29 @@ if(@mail($sendto, $subject, $msg, $headers)) {
 }
 
 ?>
-
+<footer class="page-footer">
+  <div class="container container--footer">
+    <div class="contacts" id="contacts">
+      <div class="contacts__wrapper">
+        <span class="contacts__title">Позвоните:</span>
+        <a class="contacts__text">+7(985)117-42-22</a>
+      </div>
+      <div class="contacts__wrapper">
+        <span class="contacts__title">Напишите:</span>
+        <a class="contacts__text" href="mailto:service.freshhouse@gmail.com">service.freshhouse@gmail.com</a>
+      </div>
+    </div>
+    <div class="social social--footer">
+      <div class="social__wrapper social__wrapper--footer">
+        <a class="social__logo" href="index.html">Fresh House</a>
+      </div>
+      <div class="social__wrapper social__wrapper--footer">
+        <a class="social__link social__link--vk" href="https://vk.com/freshhouseclean" target="_blank">vk</a>
+        <a class="social__link social__link--inst" href="https://www.instagram.com/freshhouse.clean" target="_blank">inst</a>
+        <a class="social__link social__link--fb" href="https://www.facebook.com/Fresh-House-363124174099586" target="_blank">fb</a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

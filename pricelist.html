@@ -470,11 +470,11 @@
         <h3 class="form__title">Контактные данные</h3>
         <div class="form__wrapper">
           <div class="form__inner">
-            <label class="form__label" for="name">Имя*:</label>
+            <label class="form__label" for="name">Имя *:</label>
             <input class="form__input form__input--long" type="text" name="name" id="name" required>
           </div>
           <div class="form__inner">
-            <label class="form__label" for="phone">Телефон*:</label>
+            <label class="form__label" for="phone">Телефон *:</label>
             <input class="form__input" type="number" name="telephone" id="phone" required>
           </div>
           <div class="form__inner">
@@ -526,7 +526,7 @@
             <input class="form__input" type="text" name="metro" id="metro">
           </div>
           <div class="form__inner">
-            <label class="form__label" for="address">Улица, дом, номер квартиры*:</label>
+            <label class="form__label" for="address">Улица, дом, номер квартиры *:</label>
             <input class="form__input form__input--long" type="text" name="address" id="address" required>
           </div>
           <div class="form__inner">
@@ -537,9 +537,9 @@
             <label class="form__label" for="floor">Этаж:</label>
             <input class="form__input form__input--short" type="text" name="floor" id="floor">
           </div>
-          <div class="form__inner">
+          <div class="form__inner form__inner--key">
             <label class="form__label" for="key">Домофон:</label>
-            <input class="form__input form__input--short" type="text" name="key" id="key">
+            <input class="form__input form__input" type="text" name="key" id="key">
           </div>
         </div>
       </div>
@@ -552,24 +552,22 @@
           </div> -->
           <div class="form__inner form__inner--comments">
             <label class="form__label" for="comments">Комментарии</label>
-            <textarea class="form__textarea" name="comments" id="comments"></textarea>
+            <textarea class="form__textarea" name="comments" maxlength="200" rows="5" placeholder="у меня нет пылесоса" id="comments"></textarea>
           </div>
           <div class="form__inner form__inner--hidden">
             <label class="form__label" for="summa">Ваш заказ</label>
             <textarea class="summa" id="summa" name="summa"></textarea>
           </div>
-          </div>
         </div>
-
+      </div>
+      <div class="form__field form__field--order">
+        <div class="form__note">* &#8212; Обязательные поля</div>
+        <input class="form__btn" type="submit" value="Заказать уборку" form="application">
+        <div class="form__confidencial">Отправляя заказ, Вы принимаете условия
+          <a class="form__confidencial-link" href="confidencial.html">Политики конфиденциальности</a>
+        </div>
+      </div>
     </form>
-    <div class="form__field">
-      <div class="form__note">* &#8212; Обязательные поля</div>
-      <div class="form__confidencial">Отправляя заказ, Вы принимаете условия
-        <a class="form__confidencial-link" href="confidencial.html">Политики конфиденциальности</a>
-      </div>
-      <input class="form__btn" type="submit" value="Заказать уборку" form="application">
-      </div>
-    </div>
   </section>
 </main>
 
