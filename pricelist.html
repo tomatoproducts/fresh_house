@@ -8,77 +8,21 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
   <!-- <script src="js/jquery.js"></script> -->
-
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
 </head>
 <body>
-  <!-- Yandex.Metrika counter -->
-
-<script type="text/javascript" >
-
-    (function (d, w, c) {
-
-        (w[c] = w[c] || []).push(function() {
-
-            try {
-
-                w.yaCounter47255544 = new Ya.Metrika({
-
-                    id:47255544,
-
-                    clickmap:true,
-
-                    trackLinks:true,
-
-                    accurateTrackBounce:true,
-
-                    webvisor:true
-
-                });
-
-            } catch(e) { }
-
-        });
-
-
-
-        var n = d.getElementsByTagName("script")[0],
-
-            s = d.createElement("script"),
-
-            f = function () { n.parentNode.insertBefore(s, n); };
-
-        s.type = "text/javascript";
-
-        s.async = true;
-
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-
-
-        if (w.opera == "[object Opera]") {
-
-            d.addEventListener("DOMContentLoaded", f, false);
-
-        } else { f(); }
-
-    })(document, window, "yandex_metrika_callbacks");
-
-</script>
-
-<noscript><div><img src="https://mc.yandex.ru/watch/47255544" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-<!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter47255544 = new Ya.Metrika2({ id:47255544, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/47255544" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 <header class="page-header">
   <div class="page-header__wrapper">
     <a class="page-header__logo" href="index.html">Fresh House</a>
     <span class="page-header__note">Cleaning company</span>
   </div>
-  <nav class="main-nav">
+  <!-- <nav class="main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item"><a class="main-nav__item-link main-nav__item-link--active" href="index.html#services">Услуги</a></li>
         <li class="main-nav__item"><a class="main-nav__item-link" href="pricelist.html">Цены</a></li>
       </ul>
-  </nav>
+  </nav> -->
   <div class="social social--header">
     <div class="social__wrapper social__wrapper--header">
         <a class="social__link social__link--vk" href="https://vk.com/freshhouseclean" target="_blank">vk</a>
@@ -487,11 +431,11 @@
         <h3 class="form__title">Дата и время уборки</h3>
         <div class="form__wrapper">
           <div class="form__inner">
-            <label class="form__label" for="date">Дата</label>
+            <label class="form__label" for="date">Дата:</label>
             <input class="form__input" type="date" name="date" id="date">
           </div>
           <div class="form__inner">
-            <label class="form__label" for="time">Время</label>
+            <label class="form__label" for="time">Время:</label>
             <select class="form__time" name="time" id="time">
               <option class="form__option" value="9:00">9:00</option>
               <option class="form__option" value="09:30">9:30</option>
@@ -551,7 +495,7 @@
             <input class="form__input form__input--hoover" type="checkbox" name="hoover[]" id="hoover">
           </div> -->
           <div class="form__inner form__inner--comments">
-            <label class="form__label" for="comments">Комментарии</label>
+            <label class="form__label" for="comments">Комментарии:</label>
             <textarea class="form__textarea" name="comments" maxlength="200" rows="5" placeholder="у меня нет пылесоса" id="comments"></textarea>
           </div>
           <div class="form__inner form__inner--hidden">
