@@ -2732,6 +2732,7 @@ input[type=number]::-webkit-outer-spin-button {
 .form__btn {
   display: inline-block;
   width: 280px;
+  margin-bottom: 10px;
   padding: 15px 0;
   margin-bottom: 20px;
   background-color: #00c675;

@@ -10,116 +10,115 @@ var resultExpress = document.getElementById("result-express");
 var resultRemont = document.getElementById("result-remont");
 var furniture = document.getElementById("furniture");
 var price = 0;
-    function calcStandart() {
+function calcStandart() {
+  var price = 0;
 
-
-    var price = 0;
-
-    if (parseInt(squareStand.value) <60) {
-      price +=2000;
+  if (parseInt(squareStand.value) <60) {
+    price +=2000;
+  }
+  if (parseInt(squareStand.value) <70) {
+    if (parseInt(squareStand.value) >=60) {
+      price +=2400;
     }
-    if (parseInt(squareStand.value) <70) {
-      if (parseInt(squareStand.value) >=60) {
-        price +=2400;
-      }
+  }
+  if (parseInt(squareStand.value) <80) {
+    if (parseInt(squareStand.value) >=70) {
+      price +=2800;
     }
-    if (parseInt(squareStand.value) <80) {
-      if (parseInt(squareStand.value) >=70) {
-        price +=2800;
-      }
+  }
+  if (parseInt(squareStand.value) <90) {
+    if (parseInt(squareStand.value) >=80) {
+      price +=3200;
     }
-    if (parseInt(squareStand.value) <90) {
-      if (parseInt(squareStand.value) >=80) {
-        price +=3200;
-      }
+  }
+  if (parseInt(squareStand.value) <100) {
+    if (parseInt(squareStand.value) >=90) {
+      price +=3600;
     }
-    if (parseInt(squareStand.value) <100) {
-      if (parseInt(squareStand.value) >=90) {
-        price +=3600;
-      }
+  }
+  if (parseInt(squareStand.value) <110) {
+    if (parseInt(squareStand.value) >=100) {
+      price +=4000;
     }
-    if (parseInt(squareStand.value) <110) {
-      if (parseInt(squareStand.value) >=100) {
-        price +=4000;
-      }
-    }
-    if (parseInt(squareStand.value) >=110) {
-      price = parseInt(squareStand.value) * 45;
-    }
+  }
+  if (parseInt(squareStand.value) >=110) {
+    price = parseInt(squareStand.value) * 45;
+  }
 
   result.innerHTML = price;
 };
-function calcGeneral() {
-    var resultGeneral = document.getElementById("result-general");
 
-    var price = 0;
-    if (parseInt(squareGen.value) ==0) {
-      price +=0;
+function calcGeneral() {
+  var resultGeneral = document.getElementById("result-general");
+
+  var price = 0;
+  if (parseInt(squareGen.value) ==0) {
+    price +=0;
+  }
+  if (parseInt(squareGen.value) <60) {
+    price +=3500;
+  }
+  if (parseInt(squareGen.value) <70) {
+    if (parseInt(squareGen.value) >=60) {
+      price +=4200;
     }
-    if (parseInt(squareGen.value) <60) {
-      price +=3500;
+  }
+  if (parseInt(squareGen.value) <80) {
+    if (parseInt(squareGen.value) >=70) {
+      price +=4900;
     }
-    if (parseInt(squareGen.value) <70) {
-      if (parseInt(squareGen.value) >=60) {
-        price +=4200;
-      }
+  }
+  if (parseInt(squareGen.value) <90) {
+    if (parseInt(squareGen.value) >=80) {
+      price +=5600;
     }
-    if (parseInt(squareGen.value) <80) {
-      if (parseInt(squareGen.value) >=70) {
-        price +=4900;
-      }
+  }
+  if (parseInt(squareGen.value) <100) {
+    if (parseInt(squareGen.value) >=90) {
+      price +=6300;
     }
-    if (parseInt(squareGen.value) <90) {
-      if (parseInt(squareGen.value) >=80) {
-        price +=5600;
-      }
-    }
-    if (parseInt(squareGen.value) <100) {
-      if (parseInt(squareGen.value) >=90) {
-        price +=6300;
-      }
-    }
-    if (parseInt(squareGen.value) >=100) {
-      price = parseInt(squareGen.value) * 75;
-    }
+  }
+  if (parseInt(squareGen.value) >=100) {
+    price = parseInt(squareGen.value) * 75;
+  }
 
   resultGeneral.innerHTML = price;
 };
+
 function calcExpress() {
+  var price = 0;
 
-
-    var price = 0;
-    if (parseInt(squareEx.value) <60) {
-      price +=1500;
+  if (parseInt(squareEx.value) <60) {
+    price +=1500;
+  }
+  if (parseInt(squareEx.value) <70) {
+    if (parseInt(squareEx.value) >=60) {
+      price +=1800;
     }
-    if (parseInt(squareEx.value) <70) {
-      if (parseInt(squareEx.value) >=60) {
-        price +=1800;
-      }
+  }
+  if (parseInt(squareEx.value) <80) {
+    if (parseInt(squareEx.value) >=70) {
+      price +=2100;
     }
-    if (parseInt(squareEx.value) <80) {
-      if (parseInt(squareEx.value) >=70) {
-        price +=2100;
-      }
+  }
+  if (parseInt(squareEx.value) <90) {
+    if (parseInt(squareEx.value) >=80) {
+      price +=2400;
     }
-    if (parseInt(squareEx.value) <90) {
-      if (parseInt(squareEx.value) >=80) {
-        price +=2400;
-      }
+  }
+  if (parseInt(squareEx.value) <100) {
+    if (parseInt(squareEx.value) >=90) {
+      price +=2700;
     }
-    if (parseInt(squareEx.value) <100) {
-      if (parseInt(squareEx.value) >=90) {
-        price +=2700;
-      }
+  }
+  if (parseInt(squareEx.value) <110) {
+    if (parseInt(squareEx.value) >=100) {
+      price +=3000;
     }
-    if (parseInt(squareEx.value) <110) {
-      if (parseInt(squareEx.value) >=100) {
-        price +=3000;
-      }
-    }
-    if (parseInt(squareEx.value) >=110) {
-      price = parseInt(squareEx.value) * 35;
-    }
+  }
+  if (parseInt(squareEx.value) >=110) {
+    price = parseInt(squareEx.value) * 35;
+  }
 
   resultExpress.innerHTML = price;
 };
@@ -127,59 +126,49 @@ function calcExpress() {
 
 function calcRemont() {
 
-    var price = 0;
+  var price = 0;
 
-    if (parseInt(squareRem.value) <40) {
-        price +=5300;
+  if (parseInt(squareRem.value) <40) {
+      price +=5300;
 
+  }
+  if (parseInt(squareRem.value) <50) {
+    if (parseInt(squareRem.value) >=40) {
+      price +=6250;
     }
-    if (parseInt(squareRem.value) <50) {
-      if (parseInt(squareRem.value) >=40) {
-        price +=6250;
-      }
+  }
+  if (parseInt(squareRem.value) <60) {
+    if (parseInt(squareRem.value) >=50) {
+      price +=7100;
     }
-    if (parseInt(squareRem.value) <60) {
-      if (parseInt(squareRem.value) >=50) {
-        price +=7100;
-      }
+  }
+  if (parseInt(squareRem.value) <70) {
+    if (parseInt(squareRem.value) >=60) {
+      price +=7500;
     }
-    if (parseInt(squareRem.value) <70) {
-      if (parseInt(squareRem.value) >=60) {
-        price +=7500;
-      }
+  }
+  if (parseInt(squareRem.value) <80) {
+    if (parseInt(squareRem.value) >=70) {
+      price +=7950;
     }
-    if (parseInt(squareRem.value) <80) {
-      if (parseInt(squareRem.value) >=70) {
-        price +=7950;
-      }
+  }
+  if (parseInt(squareRem.value) <90) {
+    if (parseInt(squareRem.value) >=80) {
+      price +=8250;
     }
-    if (parseInt(squareRem.value) <90) {
-      if (parseInt(squareRem.value) >=80) {
-        price +=8250;
-      }
+  }
+  if (parseInt(squareRem.value) <100) {
+    if (parseInt(squareRem.value) >=90) {
+      price +=8500;
     }
-    if (parseInt(squareRem.value) <100) {
-      if (parseInt(squareRem.value) >=90) {
-        price +=8500;
-      }
-    }
-    if (parseInt(squareRem.value) >=100) {
-      price = parseInt(squareRem.value) * 85;
-    }
-
+  }
+  if (parseInt(squareRem.value) >=100) {
+    price = parseInt(squareRem.value) * 85;
+  }
 
   resultRemont.innerHTML = price;
 
 };
-
-// function nofurniture() {
-
-//   price = resultRemont.innerHTML;
-// var discount = price/100 * 20;
-//   if(furniture.checked == true) {
-//   resultRemont.innerHTML = price - discount;
-//   }
-// }
 
 // Дополнительные услуги
 var result1 = document.getElementById("result1");
@@ -530,16 +519,16 @@ function resultDopTotal() {
 function order() {
   var summa;
   if (btn1.checked == true) {
-    summa =  btn1.value + ", площадь- " + parseInt(squareStand.value)+ " м2" + ", " + ("холодильник " + parseInt(freezer.innerHTML) + " шт") + ", " + ("духовка " + parseInt(oven.innerHTML) + " шт") + ", " + ("микроволновка " + parseInt(microwave.innerHTML) + " шт") + ", " + ("посуда " + parseInt(dishes.innerHTML) + " ч.") + ", " + ("балкон " + parseInt(balkon.innerHTML) + " шт") + ", " + ("шторы " + parseInt(curtain.innerHTML) + " шт") + ", " + ("жалюзи " + parseInt(blind.innerHTML) + " шт") + ", " + ("москит.сетка " + parseInt(mosquit.innerHTML) + " шт") + ", " + ("гардероб " + parseInt(wardrobe.innerHTML) + " шт") + ", " + ("кух.шкафы " + parseInt(locker.innerHTML) + " шт") + ", " + ("стирка " + parseInt(wash.innerHTML) + " шт") + ", " + ("глажка " + parseInt(iron.innerHTML) + " ч.") + ", " + ("окна " + parseInt(windows.innerHTML) + " шт") + ", " + ("люстры хрустал. " + parseInt(lamp.innerHTML) + " шт") + ", " + ("доп.время " + parseInt(addtime.innerHTML) + " ч.");
+    summa =  btn1.value + ", площадь- " + parseInt(squareStand.value)+ " м2, " + ("холодильник " + parseInt(freezer.innerHTML) + " шт") + ", " + ("духовка " + parseInt(oven.innerHTML) + " шт") + ", " + ("микроволновка " + parseInt(microwave.innerHTML) + " шт") + ", " + ("посуда " + parseInt(dishes.innerHTML) + " ч.") + ", " + ("балкон " + parseInt(balkon.innerHTML) + " шт") + ", " + ("шторы " + parseInt(curtain.innerHTML) + " шт") + ", " + ("жалюзи " + parseInt(blind.innerHTML) + " шт") + ", " + ("москит.сетка " + parseInt(mosquit.innerHTML) + " шт") + ", " + ("гардероб " + parseInt(wardrobe.innerHTML) + " шт") + ", " + ("кух.шкафы " + parseInt(locker.innerHTML) + " шт") + ", " + ("стирка " + parseInt(wash.innerHTML) + " шт") + ", " + ("глажка " + parseInt(iron.innerHTML) + " ч.") + ", " + ("окна " + parseInt(windows.innerHTML) + " шт") + ", " + ("люстры хрустал. " + parseInt(lamp.innerHTML) + " шт") + ", " + ("доп.время " + parseInt(addtime.innerHTML) + " ч.");
   }
   if (btn2.checked == true) {
-    summa =  btn2.value + ", площадь- " + parseInt(squareGen.value)+ " м2" + ", " + ("холодильник " + parseInt(freezer.innerHTML) + " шт") + ", " + ("духовка " + parseInt(oven.innerHTML) + " шт") + ", " + ("микроволновка " + parseInt(microwave.innerHTML) + " шт") + ", " + ("посуда " + parseInt(dishes.innerHTML) + " ч.") + ", " + ("балкон " + parseInt(balkon.innerHTML) + " шт") + ", " + ("шторы " + parseInt(curtain.innerHTML) + " шт") + ", " + ("жалюзи " + parseInt(blind.innerHTML) + " шт") + ", " + ("москит.сетка " + parseInt(mosquit.innerHTML) + " шт") + ", " + ("гардероб " + parseInt(wardrobe.innerHTML) + " шт") + ", " + ("кух.шкафы " + parseInt(locker.innerHTML) + " шт") + ", " + ("стирка " + parseInt(wash.innerHTML) + " шт") + ", " + ("глажка " + parseInt(iron.innerHTML) + " ч.") + ", " + ("окна " + parseInt(windows.innerHTML) + " шт") + ", " + ("люстры хрустал. " + parseInt(lamp.innerHTML) + " шт") + ", " + ("доп.время " + parseInt(addtime.innerHTML) + " ч.");
+    summa =  btn2.value + ", площадь- " + parseInt(squareGen.value)+ " м2, " + ("холодильник " + parseInt(freezer.innerHTML) + " шт") + ", " + ("духовка " + parseInt(oven.innerHTML) + " шт") + ", " + ("микроволновка " + parseInt(microwave.innerHTML) + " шт") + ", " + ("посуда " + parseInt(dishes.innerHTML) + " ч.") + ", " + ("балкон " + parseInt(balkon.innerHTML) + " шт") + ", " + ("шторы " + parseInt(curtain.innerHTML) + " шт") + ", " + ("жалюзи " + parseInt(blind.innerHTML) + " шт") + ", " + ("москит.сетка " + parseInt(mosquit.innerHTML) + " шт") + ", " + ("гардероб " + parseInt(wardrobe.innerHTML) + " шт") + ", " + ("кух.шкафы " + parseInt(locker.innerHTML) + " шт") + ", " + ("стирка " + parseInt(wash.innerHTML) + " шт") + ", " + ("глажка " + parseInt(iron.innerHTML) + " ч.") + ", " + ("окна " + parseInt(windows.innerHTML) + " шт") + ", " + ("люстры хрустал. " + parseInt(lamp.innerHTML) + " шт") + ", " + ("доп.время " + parseInt(addtime.innerHTML) + " ч.");
   }
   if (btn3.checked == true) {
-    summa =  btn3.value + ", площадь- " + parseInt(squareEx.value)+ " м2" + ", " + ("холодильник " + parseInt(freezer.innerHTML) + " шт") + ", " + ("духовка " + parseInt(oven.innerHTML) + " шт") + ", " + ("микроволновка " + parseInt(microwave.innerHTML) + " шт") + ", " + ("посуда " + parseInt(dishes.innerHTML) + " ч.") + ", " + ("балкон " + parseInt(balkon.innerHTML) + " шт") + ", " + ("шторы " + parseInt(curtain.innerHTML) + " шт") + ", " + ("жалюзи " + parseInt(blind.innerHTML) + " шт") + ", " + ("москит.сетка " + parseInt(mosquit.innerHTML) + " шт") + ", " + ("гардероб " + parseInt(wardrobe.innerHTML) + " шт") + ", " + ("кух.шкафы " + parseInt(locker.innerHTML) + " шт") + ", " + ("стирка " + parseInt(wash.innerHTML) + " шт") + ", " + ("глажка " + parseInt(iron.innerHTML) + " ч.") + ", " + ("окна " + parseInt(windows.innerHTML) + " шт") + ", " + ("люстры хрустал. " + parseInt(lamp.innerHTML) + " шт") + ", " + ("доп.время " + parseInt(addtime.innerHTML) + " ч.");
+    summa =  btn3.value + ", площадь- " + parseInt(squareEx.value)+ " м2, " + ("холодильник " + parseInt(freezer.innerHTML) + " шт") + ", " + ("духовка " + parseInt(oven.innerHTML) + " шт") + ", " + ("микроволновка " + parseInt(microwave.innerHTML) + " шт") + ", " + ("посуда " + parseInt(dishes.innerHTML) + " ч.") + ", " + ("балкон " + parseInt(balkon.innerHTML) + " шт") + ", " + ("шторы " + parseInt(curtain.innerHTML) + " шт") + ", " + ("жалюзи " + parseInt(blind.innerHTML) + " шт") + ", " + ("москит.сетка " + parseInt(mosquit.innerHTML) + " шт") + ", " + ("гардероб " + parseInt(wardrobe.innerHTML) + " шт") + ", " + ("кух.шкафы " + parseInt(locker.innerHTML) + " шт") + ", " + ("стирка " + parseInt(wash.innerHTML) + " шт") + ", " + ("глажка " + parseInt(iron.innerHTML) + " ч.") + ", " + ("окна " + parseInt(windows.innerHTML) + " шт") + ", " + ("люстры хрустал. " + parseInt(lamp.innerHTML) + " шт") + ", " + ("доп.время " + parseInt(addtime.innerHTML) + " ч.");
   }
   if (btn4.checked == true) {
-    summa =  btn4.value + ", площадь- " + parseInt(squareRem.value)+ " м2" + ", " + ("холодильник " + parseInt(freezer.innerHTML) + " шт") + ", " + ("духовка " + parseInt(oven.innerHTML) + " шт") + ", " + ("микроволновка " + parseInt(microwave.innerHTML) + " шт") + ", " + ("посуда " + parseInt(dishes.innerHTML) + " ч.") + ", " + ("балкон " + parseInt(balkon.innerHTML) + " шт") + ", " + ("шторы " + parseInt(curtain.innerHTML) + " шт") + ", " + ("жалюзи " + parseInt(blind.innerHTML) + " шт") + ", " + ("москит.сетка " + parseInt(mosquit.innerHTML) + " шт") + ", " + ("гардероб " + parseInt(wardrobe.innerHTML) + " шт") + ", " + ("кух.шкафы " + parseInt(locker.innerHTML) + " шт") + ", " + ("стирка " + parseInt(wash.innerHTML) + " шт") + ", " + ("глажка " + parseInt(iron.innerHTML) + " ч.") + ", " + ("окна " + parseInt(windows.innerHTML) + " шт") + ", " + ("люстры хрустал. " + parseInt(lamp.innerHTML) + " шт") + ", " + ("доп.время " + parseInt(addtime.innerHTML) + " ч.");
+    summa =  btn4.value + ", площадь- " + parseInt(squareRem.value)+ " м2, " + ("холодильник " + parseInt(freezer.innerHTML) + " шт") + ", " + ("духовка " + parseInt(oven.innerHTML) + " шт") + ", " + ("микроволновка " + parseInt(microwave.innerHTML) + " шт") + ", " + ("посуда " + parseInt(dishes.innerHTML) + " ч.") + ", " + ("балкон " + parseInt(balkon.innerHTML) + " шт") + ", " + ("шторы " + parseInt(curtain.innerHTML) + " шт") + ", " + ("жалюзи " + parseInt(blind.innerHTML) + " шт") + ", " + ("москит.сетка " + parseInt(mosquit.innerHTML) + " шт") + ", " + ("гардероб " + parseInt(wardrobe.innerHTML) + " шт") + ", " + ("кух.шкафы " + parseInt(locker.innerHTML) + " шт") + ", " + ("стирка " + parseInt(wash.innerHTML) + " шт") + ", " + ("глажка " + parseInt(iron.innerHTML) + " ч.") + ", " + ("окна " + parseInt(windows.innerHTML) + " шт") + ", " + ("люстры хрустал. " + parseInt(lamp.innerHTML) + " шт") + ", " + ("доп.время " + parseInt(addtime.innerHTML) + " ч.");
   }
 
 
