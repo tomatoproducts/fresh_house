@@ -351,8 +351,9 @@ body {
   }
 }
 .stock {
-  background-color: #ff6347;
+  min-height: 260px;
   margin-bottom: 10px;
+  background-color: #ff6347;
 }
 .stock--fix {
   position: -webkit-sticky;
@@ -362,21 +363,35 @@ body {
   left: 0;
   background-color: rgba(255, 99, 71, 0.5);
 }
+.stock__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  width: 280px;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
 .stock__text {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 30px;
   font-size: 30px;
   line-height: 40px;
   font-weight: 400;
   letter-spacing: -0.03em;
   color: #ffffff;
+  text-align: center;
 }
 .stock__link {
   display: block;
-  width: 260px;
-  height: 60px;
+  width: 280px;
+  padding: 15px 0;
   background-color: #00c675;
   border-radius: 4px;
-  font-size: 24px;
-  line-height: 60px;
+  font-size: 20px;
   font-weight: 500;
   text-align: center;
   text-decoration: none;
@@ -384,6 +399,60 @@ body {
 }
 .stock__link:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+@media (min-width: 660px) {
+  .stock {
+    min-height: 130px;
+    background-color: #ff6347;
+    margin-bottom: 10px;
+  }
+  .stock--fix {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 99, 71, 0.5);
+  }
+  .stock__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    width: 1160px;
+    min-height: 130px;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .stock__text {
+    margin: 0;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    text-align: unset;
+  }
+  .stock__brake {
+    display: none;
+  }
+  .stock__link {
+    display: block;
+    width: 280px;
+    padding: 15px 0;
+    background-color: #00c675;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .stock__link:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
 }
 .contacts {
   display: -ms-flexbox;
@@ -459,6 +528,10 @@ body {
 .promo-block {
   min-height: 270px;
   background-color: whitesmoke;
+  background-image: url("../img/bg_header_min.jpg");
+  background-repeat: no-repeat;
+  background-position: 8% -40px;
+  background-size: 215%;
 }
 .promo-block--pricelist {
   min-height: 170px;
@@ -489,7 +562,7 @@ body {
   font-size: 30px;
   line-height: 40px;
   font-weight: 700;
-  color: #00c675;
+  color: #ff6347;
   letter-spacing: 0.01em;
   text-align: center;
 }
@@ -506,19 +579,16 @@ body {
   display: none;
 }
 .promo-block__count {
-  display: inline-block;
+  display: block;
   width: 280px;
   padding: 15px 0;
   background-color: #00c675;
-  border-radius: 3px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
   text-align: center;
   text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 500;
-  border: 1px solid transparent;
-  box-sizing: border-box;
+  color: #ffffff;
 }
 .promo-block__count:hover {
   background-color: #9b9998;
@@ -1757,15 +1827,6 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0 auto;
     padding: 0 20px;
   }
-  .container--stock {
-    display: -ms-flexbox;
-    display: flex;
-    height: 120px;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-  }
   .container--footer {
     display: -ms-flexbox;
     display: flex;
@@ -2861,6 +2922,7 @@ input[type=number]::-webkit-outer-spin-button {
       flex-direction: column;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  background-color: rgba(245, 245, 245, 0.8);
 }
 .slider-price__toggle {
   display: block;
@@ -3036,11 +3098,10 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 auto;
   margin-bottom: 30px;
   padding: 0;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 28px;
+  line-height: 32px;
   font-weight: 500;
-  text-transform: uppercase;
-  color: #00c675;
+  color: #ff6347;
 }
 @media (min-width: 660px) {
   .price {
