@@ -459,6 +459,18 @@ body {
   position: relative;
   padding-top: 0;
 }
+.promo-block__title {
+  width: 270px;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #00c675;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
 .promo-block__slogan {
   display: block;
   color: grey;
@@ -526,6 +538,20 @@ body {
   .promo-block__wrapper--send {
     position: relative;
     padding-top: 0;
+  }
+  .promo-block__title {
+    width: 630px;
+    margin: 0;
+    margin-bottom: 80px;
+    margin-top: 30px;
+    padding: 0;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 700;
+    color: #00c675;
+    letter-spacing: 0.03em;
+    text-shadow: 1px 0 0 #666666;
+    text-align: left;
   }
   .promo-block__slogan {
     display: block;
