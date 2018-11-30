@@ -1,4 +1,5 @@
 node_modules/
+css/
 bower_components/
 .DS_Store
 Thumbs.db
@@ -8,4 +9,4 @@ Thumbs.db
 *.psd
 *.ai
 *.pdf
-*.css
+

@@ -3265,6 +3265,151 @@ th.promotions__data {
 .promotions__condition {
   font-size: 14px;
 }
+@media (min-width: 660px) {
+  .promotions__title {
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    padding: 30px 0;
+    background-color: #ff6347;
+    font-size: 60px;
+    line-height: 64px;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+  }
+  .promotions__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .promotions__unit-title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #00c675;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .promotions__text {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+  .promotions__text:last-of-type {
+    margin-bottom: 40px;
+  }
+  .promotions__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    margin-bottom: 100px;
+  }
+  .promotions__item {
+    width: 1000px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    margin-bottom: 80px;
+  }
+  .promotions__item--three {
+    margin-bottom: 0;
+  }
+  .promotions__subtitle {
+    position: relative;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 14px 0;
+    padding-left: 70px;
+    padding-bottom: 0;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 500;
+    color: #ff6347;
+  }
+  .promotions__subtitle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/piggy-bank.svg");
+    background-repeat: no-repeat;
+  }
+  .promotions__subtitle--assistant::before {
+    background-image: url("../img/charwoman.svg");
+  }
+  .promotions__subtitle--general::before {
+    background-image: url("../img/housework.svg");
+  }
+  .promotions__descript {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+  }
+  .promotions__descript--one {
+    margin-bottom: 40px;
+  }
+  .promotions__table {
+    background-color: #ff6347;
+    border-radius: 5px;
+    color: #ffffff;
+  }
+  .promotions__row:first-child {
+    border-bottom: 2px solid #ffffff;
+  }
+  .promotions__data {
+    width: 340px;
+    padding: 15px 0;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+  th.promotions__data {
+    padding: 5px 0;
+    padding-top: 8px;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+    color: #ffd700;
+  }
+  .promotions__data:first-child {
+    border-right: 2px solid #ffffff;
+  }
+  .promotions__conditions {
+    width: 970px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .promotions__condition {
+    font-size: 14px;
+  }
+}
 .page-footer {
   padding: 50px 0;
   background-color: #c7c0c0;
