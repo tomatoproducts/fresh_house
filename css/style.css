@@ -584,15 +584,12 @@ body {
   display: block;
   width: 280px;
   padding: 15px 0;
-<<<<<<< HEAD
   background-color: rgba(0, 198, 117, 0.9);
   border-radius: 3px;
-=======
   background-color: #00c675;
   border-radius: 4px;
   font-size: 20px;
   font-weight: 500;
->>>>>>> 97c3ec9ff396e99b9f959da9769bc871e953e145
   text-align: center;
   text-decoration: none;
   color: #ffffff;
@@ -1985,50 +1982,6 @@ input[type=number]::-webkit-outer-spin-button {
     color: #00c675;
     border-bottom: 1px dotted #00c675;
   }
-<<<<<<< HEAD
-  .reviews__wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    margin-bottom: 30px;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-  }
-  .reviews__wrapper:last-child {
-    margin-bottom: 0;
-  }
-  .reviews__item {
-    width: 350px;
-    padding: 10px;
-    box-sizing: border-box;
-    height: auto;
-    overflow: visible;
-  }
-  .reviews__item:hover {
-    transition-duration: 500ms;
-    background-color: #c7c0c0;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  .reviews__item-name {
-    display: block;
-    margin-bottom: 10px;
-    padding-left: 10px;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 22px;
-  }
-  .reviews__item-text {
-    margin: 0;
-    padding: 10px;
-  }
-}
-.step {
-  padding: 40px 0;
-=======
->>>>>>> 97c3ec9ff396e99b9f959da9769bc871e953e145
 }
 .form {
   display: -ms-flexbox;
@@ -2500,6 +2453,7 @@ input[type=number]::-webkit-outer-spin-button {
     overflow: visible;
   }
   .reviews__item:hover {
+    transition-duration: 500ms;
     background-color: #c7c0c0;
     color: white;
     border-radius: 3px;
@@ -3060,6 +3014,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: block;
     border: none;
     border-radius: 2px;
+    background-color: transparent;
   }
   .slider-price__toggle {
     display: inline-block;
@@ -3309,7 +3264,7 @@ th.promotions__data {
   font-size: 36px;
   line-height: 40px;
   font-weight: 700;
-  color: #ffd700;
+  color: #ffffff;
 }
 .promotions__data:first-child {
   border-right: 2px solid #ffffff;
@@ -3455,7 +3410,7 @@ th.promotions__data {
     font-size: 40px;
     line-height: 44px;
     font-weight: 700;
-    color: #ffd700;
+    color: #ffffff;
   }
   .promotions__data:first-child {
     border-right: 2px solid #ffffff;
