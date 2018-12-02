@@ -27,8 +27,6 @@
   box-sizing: border-box;
 }
 .social__logo:hover {
-  // color: #00c675;
-  // background: #00c675;
   border: 2px solid #D6D7E0;
   border-radius: 3px;
   box-sizing: border-box;
@@ -76,7 +74,7 @@
   background-color: #c7c0c0;
 }
 .social__link:hover {
-  background: #00c675;
+  background: @green;
 }
 .social__link:active::before {
   opacity: 0.8;
@@ -165,7 +163,8 @@
    }
 
    &--footer .social__link:hover {
-      border: 2px solid #D6D7E0;
+      transition-duration: 300ms;
+      border: 2px solid transparent;
       border-radius: 5px;
       box-sizing: border-box;
    }
@@ -192,7 +191,7 @@
     background-color: #c7c0c0;
   }
   .social__link:hover {
-    background: #00c675;
+    background: @green;
   }
   .social__link:active::before {
     opacity: 0.8;

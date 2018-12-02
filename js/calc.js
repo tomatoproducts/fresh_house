@@ -13,36 +13,37 @@ var price = 0;
 function calcStandart() {
   var price = 0;
 
-  if (parseInt(squareStand.value) <60) {
+  if (parseInt(squareStand.value) <50) {
     price +=2000;
+  }
+  if (parseInt(squareStand.value) <60) {
+    if (parseInt(squareStand.value) >=50) {
+      price +=2500;
+    }
   }
   if (parseInt(squareStand.value) <70) {
     if (parseInt(squareStand.value) >=60) {
-      price +=2400;
+      price +=3000;
     }
   }
   if (parseInt(squareStand.value) <80) {
     if (parseInt(squareStand.value) >=70) {
-      price +=2800;
+      price +=3500;
     }
   }
   if (parseInt(squareStand.value) <90) {
     if (parseInt(squareStand.value) >=80) {
-      price +=3200;
+      price +=4000;
     }
   }
   if (parseInt(squareStand.value) <100) {
     if (parseInt(squareStand.value) >=90) {
-      price +=3600;
+      price +=4500;
     }
   }
-  if (parseInt(squareStand.value) <110) {
-    if (parseInt(squareStand.value) >=100) {
-      price +=4000;
-    }
-  }
-  if (parseInt(squareStand.value) >=110) {
-    price = parseInt(squareStand.value) * 45;
+
+  if (parseInt(squareStand.value) >=100) {
+    price = parseInt(squareStand.value) * 50;
   }
 
   result.innerHTML = price;

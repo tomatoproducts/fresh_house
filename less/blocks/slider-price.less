@@ -117,16 +117,15 @@
     width: 685px;
     margin: 0 auto;
     margin-bottom: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: block;
     border: none;
     border-radius: 2px;
-    background-color: rgba(245, 245, 245, 0.8);
   }
   .slider-price__toggle {
-    display: block;
+    display: inline-block;
+    margin-right: -4px;
     padding: 10px 20px;
+    background-color: rgba(245, 245, 245, 0.8);
     font-size: 22px;
     line-height: 22px;
     font-weight: 500;
@@ -138,8 +137,10 @@
   #btns-02:checked ~ .slider-price__toggles .slider-price__toggle--two2,
   #btns-03:checked ~ .slider-price__toggles .slider-price__toggle--three3,
   #btns-04:checked ~ .slider-price__toggles .slider-price__toggle--four4 {
+    padding: 15px 20px;
     background-color: #00c675;
     color: white;
+    box-sizing: border-box;
   }
 
   .slider-price__toggle:hover {

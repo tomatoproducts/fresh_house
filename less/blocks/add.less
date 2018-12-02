@@ -12,14 +12,11 @@
   line-height: 24px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #00c675;
+  color: @green;
 }
 .add__wrapper {
   display: flex;
-  // justify-content: space-between;
   flex-wrap: wrap;
-  // margin-bottom: 30px;
-
 }
 .add__inner {
   margin-right: 20px;
@@ -37,7 +34,7 @@
   width: 130px;
   height: 120px;
   margin-bottom: 5px;
-  border: 1px dotted #00c675;
+  border: 1px dotted @green;
   border-radius: 5px;
   box-sizing: border-box;
   background-image: url("../img/holodilnik1.svg");
@@ -123,7 +120,7 @@
   line-height: 16px;
   font-weight: 500;
   padding: 10px 0;
-  background-color: #00c675;
+  background-color: @green;
   border-radius: 3px;
   text-align: center;
   text-decoration: none;
@@ -144,8 +141,8 @@
   font-size: 22px;
   line-height: 22px;
   font-weight: 700;
-  color: #00c675;
-  border: 1px dotted #00c675;
+  color: @green;
+  border: 1px dotted @green;
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -170,7 +167,7 @@
     line-height: 38px;
     font-weight: 500;
     text-transform: uppercase;
-    color: #00c675;
+    color: @green;
   }
   .add__wrapper {
     display: flex;
@@ -202,7 +199,7 @@
     width: 260px;
     height: 200px;
     margin-bottom: 10px;
-    border: 1px dotted #00c675;
+    border: 1px dotted @green;
     border-radius: 5px;
     box-sizing: border-box;
     background-image: url("../img/holodilnik1.svg");
@@ -276,7 +273,7 @@
   .add__item-title {
     display: block;
     padding: 10px 0;
-    border-bottom: 1px dotted #00c675;
+    border-bottom: 1px dotted @green;
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
@@ -308,7 +305,7 @@
     line-height: 18px;
     font-weight: 700;
     padding: 20px 0;
-    background-color: #00c675;
+    background-color: @green;
     border-radius: 3px;
     text-align: center;
     text-decoration: none;
@@ -318,6 +315,12 @@
     border: 1px solid transparent;
     box-sizing: border-box;
     cursor: pointer;
+  }
+  .add__btn:hover {
+    transition-duration: 300ms;
+    background-color: @green-hover;
+    box-shadow: 0 0px 28px rgba(0,0,0,0.25), 0 6px 16px rgba(0,0,0,0.22);
+    box-sizing: border-box;
   }
   .add__sum {
     display: block;
@@ -329,8 +332,8 @@
     font-size: 24px;
     line-height: 24px;
     font-weight: 700;
-    color: #00c675;
-    border: 1px dotted #00c675;
+    color: @green;
+    border: 1px dotted @green;
     border-radius: 5px;
     box-sizing: border-box;
   }

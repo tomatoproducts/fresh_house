@@ -18,9 +18,10 @@
   font-size: 40px;
   line-height: 42px;
   text-decoration: none;
-  color: #00c675;
+  color: @green;
 }
 .page-header__logo:hover {
+  transition-duration: 400ms;
   color: #9b9998;
 }
 .page-header__note {
@@ -41,7 +42,7 @@
     font-size: 28px;
     line-height: 30px;
     text-decoration: none;
-    color: #00c675;
+    color: @green;
   }
 
   .page-header__contacts-discr {
@@ -78,10 +79,11 @@
     font-size: 44px;
     line-height: 44px;
     text-decoration: none;
-    color: #00c675;
+    color: @green;
   }
   .page-header__logo:hover {
-    color: #9b9998;
+    transition-duration: 400ms;
+    color: lighten(@green,3%);
   }
   .page-header__note {
     display: block;
@@ -101,7 +103,7 @@
     font-size: 28px;
     line-height: 28px;
     text-decoration: none;
-    color: #00c675;
+    color: @green;
   }
 
   .page-header__contacts-discr {
