@@ -253,7 +253,7 @@ body {
 }
 .page-header__logo:hover {
   transition-duration: 400ms;
-  color: #9b9998;
+  color: rgba(0, 213, 126, 0.9);
 }
 .page-header__note {
   display: block;
@@ -529,11 +529,7 @@ body {
 }
 .promo-block {
   min-height: 270px;
-  background-color: whitesmoke;
-  background-image: url("../img/bg_header_min.jpg");
-  background-repeat: no-repeat;
-  background-position: 8% -40px;
-  background-size: 215%;
+  background-color: #f4ece1;
 }
 .promo-block--pricelist {
   min-height: 170px;
@@ -595,8 +591,9 @@ body {
   color: #ffffff;
 }
 .promo-block__count:hover {
-  background-color: #9b9998;
-  box-sizing: border-box;
+  transition-duration: 400ms;
+  background-color: rgba(0, 198, 117, 0.8);
+  box-shadow: 0 0px 28px rgba(0, 0, 0, 0.25), 0 6px 16px rgba(0, 0, 0, 0.22);
 }
 .promo-block__count:active {
   color: #e6e6e6;
@@ -693,6 +690,7 @@ body {
   -ms-flex-direction: column;
       flex-direction: column;
   padding: 30px 0;
+  background-color: rgba(245, 245, 245, 0.8);
   border: 1px dotted #00c675;
   border-radius: 5px;
   box-sizing: border-box;
@@ -1055,7 +1053,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-bottom: 30px;
   padding: 0;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
@@ -1420,7 +1418,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 260px;
   margin-bottom: 20px;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 20px;
   padding: 10px 0;
   background-color: rgba(0, 198, 117, 0.9);
   border-radius: 3px;
@@ -2104,10 +2102,13 @@ input[type=number]::-webkit-outer-spin-button {
   box-sizing: border-box;
 }
 .form__btn:hover {
-  background-color: #9b9998;
+  transition-duration: 300ms;
+  background-color: rgba(0, 198, 117, 0.8);
+  box-shadow: 0 0px 28px rgba(0, 0, 0, 0.25), 0 6px 16px rgba(0, 0, 0, 0.22);
   box-sizing: border-box;
 }
 .form__btn:active {
+  transition-duration: 100ms;
   color: #e6e6e6;
 }
 .form__note {
@@ -2379,7 +2380,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-bottom: 30px;
   padding: 0;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
@@ -2485,7 +2486,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-bottom: 30px;
   padding: 0;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
@@ -2679,12 +2680,10 @@ input[type=number]::-webkit-outer-spin-button {
       align-items: baseline;
 }
 .social__wrapper--footer .social__link {
-  border: 2px solid transparent;
   box-sizing: border-box;
   margin: 0;
 }
 .social__wrapper--footer .social__link:hover {
-  border: 2px solid #D6D7E0;
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -2781,13 +2780,10 @@ input[type=number]::-webkit-outer-spin-button {
         align-items: baseline;
   }
   .social__wrapper--footer .social__link {
-    border: 2px solid transparent;
     box-sizing: border-box;
     margin: 0;
   }
   .social__wrapper--footer .social__link:hover {
-    transition-duration: 300ms;
-    border: 2px solid transparent;
     border-radius: 5px;
     box-sizing: border-box;
   }

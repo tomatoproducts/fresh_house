@@ -121,10 +121,13 @@
   box-sizing: border-box;
 }
 .form__btn:hover {
-  background-color: #9b9998;
+  transition-duration: 300ms;
+  background-color: @green-hover;
+  box-shadow: 0 0px 28px rgba(0,0,0,0.25), 0 6px 16px rgba(0,0,0,0.22);
   box-sizing: border-box;
 }
 .form__btn:active {
+  transition-duration: 100ms;
   color: lighten(#9b9998, 30%);
 }
 .form__note {

@@ -1,10 +1,6 @@
 .promo-block {
   min-height: 270px;
-  background-color: whitesmoke;
-  background-image: url("../img/bg_header_min.jpg");
-  background-repeat: no-repeat;
-  background-position: 8% -40px;
-  background-size: 215%;
+  background-color: #f4ece1;
 
   &--pricelist {
     min-height: 170px;
@@ -66,8 +62,9 @@
   color: #ffffff;
 }
 .promo-block__count:hover {
-  background-color: #9b9998;
-  box-sizing: border-box;
+  transition-duration: 400ms;
+  background-color: @green-hover;
+  box-shadow: 0 0px 28px rgba(0,0,0,0.25), 0 6px 16px rgba(0,0,0,0.22);
 }
 .promo-block__count:active {
   color: lighten(#9b9998, 30%);
