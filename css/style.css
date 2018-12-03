@@ -2265,10 +2265,13 @@ input[type=number]::-webkit-outer-spin-button {
     box-sizing: border-box;
   }
   .form__btn:hover {
-    background-color: #9b9998;
+    transition-duration: 300ms;
+    background-color: rgba(0, 198, 117, 0.8);
+    box-shadow: 0 0px 28px rgba(0, 0, 0, 0.25), 0 6px 16px rgba(0, 0, 0, 0.22);
     box-sizing: border-box;
   }
   .form__btn:active {
+    transition-duration: 100ms;
     color: #e6e6e6;
   }
   .form__note {
