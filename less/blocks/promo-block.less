@@ -1,10 +1,6 @@
 .promo-block {
   min-height: 270px;
-  background-color: whitesmoke;
-  background-image: url("../img/bg_header_min.jpg");
-  background-repeat: no-repeat;
-  background-position: 8% -40px;
-  background-size: 215%;
+  background-color: #f4ece1;
 
   &--pricelist {
     min-height: 170px;
@@ -33,31 +29,17 @@
   font-size: 30px;
   line-height: 40px;
   font-weight: 700;
-  color: #ff6347;
+  color: @green-main;
   letter-spacing: 0.01em;
   text-align: center;
 }
-.promo-block__slogan {
-  display: block;
-  color: grey;
-  margin-bottom: 50px;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
-  text-align: center;
-
-  &--pricelist {
-      display: none;
-    }
-}
-
 .promo-block__count {
   display: block;
   width: 280px;
   padding: 15px 0;
   background-color: @green;
   border-radius: 3px;
-  background-color: #00c675;
+  background-color: @green-main;
   border-radius: 4px;
   font-size: 20px;
   font-weight: 500;
@@ -66,8 +48,9 @@
   color: #ffffff;
 }
 .promo-block__count:hover {
-  background-color: #9b9998;
-  box-sizing: border-box;
+  transition-duration: 400ms;
+  background-color: @green-hover;
+  box-shadow: 0 0px 28px rgba(0,0,0,0.25), 0 6px 16px rgba(0,0,0,0.22);
 }
 .promo-block__count:active {
   color: lighten(#9b9998, 30%);
@@ -117,23 +100,10 @@
     font-size: 60px;
     line-height: 70px;
     font-weight: 700;
-    color: #00c675;
+    color: @green-main;
     letter-spacing: 0.03em;
     text-shadow: 1px 0 0 #666666;
     text-align: left;
-  }
-
-  .promo-block__slogan {
-    display: block;
-    width: 660px;
-    margin-bottom: 80px;
-    font-size: 40px;
-    line-height: 44px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    color: @green;
-    text-align: left;
-    text-shadow: 1px 0px 1px #333;
   }
 
   .promo-block__count {
